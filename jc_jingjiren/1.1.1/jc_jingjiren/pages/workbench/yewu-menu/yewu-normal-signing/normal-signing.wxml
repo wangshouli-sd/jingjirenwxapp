@@ -1,0 +1,61 @@
+<view class='page'>
+  <view class='wrapper'>
+    <view class='wrapper-search'>
+      <view class="weui-search-bar__box">
+          <i-icon type="sousuo" size="16" color="#B5B4B4" class='w-icon-search_in-box'></i-icon>
+          <input type="text" class="weui-search-bar__input" confirm-type='search' placeholder="搜索" value="" bindinput="inputTyping" />
+          <label class="weui-search-bar__label"  hidden="{{inputShowed}}" bindtap="showInput">
+              <i-icon type="sousuo" size="20" color="#B5B4B4" style='margin-right:10rpx;'></i-icon>
+              <view class="weui-search-bar__text">关键词搜索</view>
+          </label>
+      </view>
+    </view>
+     <view class='wrapper-body'>
+      <view class='order-list'>
+        <view wx:for="{{list}}" wx:key="index" class='w-card'>
+          <view class='w-card-head weui-flex'>
+            <view class="weui-flex__item w-tab-item">
+              <image src='http://jingji.ijiechen.com//data/ji_jingjiren/2018102916/0248cf631b1f73e2ffb92ddeb2643b4c.png'></image>
+              <text>小程序</text>
+            </view>
+             <view class="">
+                <text style='color:#67C23A;'>已签约</text>
+            </view>
+          </view>
+          <view class='w-card-body'>
+            <view class='weui-flex' style='width:100%;'>
+              <view class="card-body-left">
+                <image src='http://jingji.ijiechen.com//data/ji_jingjiren/2018102916/0248cf631b1f73e2ffb92ddeb2643b4c.png'></image>
+              </view>
+              <view class="weui-flex__item card-body-right">
+                <view class='item-title'>这是标题</view>
+                <!-- <view class='item-subtitle'>这是副标题这是副标题这是副标题这是副标题</view> -->
+                <!-- <view class='item-user'>
+                    <text>业务人：熊大</text>
+                    <text>联系方式：1544541556</text>
+                </view> -->
+                <view class='item-info'>
+                  <view>业务人:熊大</view>
+                  <view>联系方式:41561615</view>
+                  <view>项目类型:小程序</view>
+                  <view>项目佣金:<text style='color:#ce2020;'>￥1000</text></view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class='w-card-foot weui-flex'>
+            <view class="weui-flex__item foot-l">
+              2015/01/20
+            </view>
+            <view class="weui-flex__item">
+              <button class="weui-btn mini-btn" type="default" size="mini">查看详情</button>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view>
+        <include src="../../../template/noMoreData.wxml"/>
+      </view> 
+    </view>
+  </view>
+</view>

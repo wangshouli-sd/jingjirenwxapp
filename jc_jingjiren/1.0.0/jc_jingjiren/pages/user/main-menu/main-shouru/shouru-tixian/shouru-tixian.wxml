@@ -1,0 +1,95 @@
+<view class=''>
+  <view class='w-wrpper-tixian'>
+    <view class='w-tixian-title'>提现金额</view>
+    <view class='w-tixina-inputBox weui-flex'>
+      <view style='font-size:40rpx;'>￥</view><view class='w-tixina-input weui-flex__item'>
+        <input style='margin-top:10rpx;' placeholder='请输入提现金额' type='digit' value='{{txValue}}' placeholder-class="placeholderstyle" bindinput='maketxValueChange'></input>
+      </view>
+    </view>
+    <view class='w-tixina-intr weui-flex'>
+      <view class='weui-flex__item w-tixina-intrl'>可提现金额￥
+        <text>{{txValue_total}}</text>
+      </view>
+      <view class='weui-flex__item w-tixina-intrr tr'>
+          <button catchtap='settxValue'>全部提现</button>
+      </view>
+    </view>
+  </view>
+  <view class='w-interval'></view>
+  <view class='w-wrapper-type'>
+      <view class='w-type-title'>
+        提现方式
+      </view>
+      <view class='w-type-content'>
+        <radio-group class="radio-group" bindchange="radioChange">
+          
+            <label class="" wx:for="{{tixiantype}}" wx:if="{{item.isopen == '1'}}" wx:key="index">
+                <radio class="weui-check" value="{{index}}" checked="{{item.checked}}"></radio>
+                
+                <view class='weui-flex w-type-item'>
+                  <view class='w-type-item-icon'><image src='{{item.icon}}'></image></view>
+                  <view class='w-type-item-title weui-flex__item'>提现到{{item.title}}</view>
+                  <view class='w-type-item-radio'>
+                    <view  wx:if="{{item.checked}}"></view>
+                    <!-- <icon class="weui-icon-radio" type="success_no_circle" size="14" wx:if="{{item.checked}}"></icon> -->
+                  </view>
+                </view>
+            </label>
+        </radio-group>
+        <!-- 支付宝 -->
+        <view class='w-tixian-info' wx:if="{{tixiantypeActive==1}}">
+          <view class='w-input-item weui-flex'>
+            <view class='input-l'>
+                姓\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n名
+            </view>
+            <view  class='weui-flex__item input-r'>
+              <input adjust-position='true' class='weui-input' type='text' placeholder='请输入姓名' value='{{txinfo.truename}}' bindinput='truenameChange'></input>
+            </view>
+          </view>
+          <view class='w-input-item weui-flex'>
+              <view class='input-l'>
+                  支付宝号
+              </view>
+              <view  class='weui-flex__item input-r'>
+                <input adjust-position='true' class='weui-input' type='text' placeholder='请输入支付宝账号' value='{{txinfo.alipay}}' bindinput='alipayChange'></input>
+              </view>
+          </view>
+        </view>
+        <!-- 银行卡信息 -->
+        <view class='w-tixian-info' wx:if="{{tixiantypeActive==2}}">
+          <view class='w-input-item weui-flex'>
+            <view class='input-l'>
+                姓\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n名
+            </view>
+            <view  class='weui-flex__item input-r'>
+              <input class='weui-input' type='text' placeholder='请输入姓名' value='{{txinfo.truename}}' bindinput='truenameChange'></input>
+            </view>
+          </view>
+          <view class='w-input-item weui-flex'>
+              <view class='input-l'>
+                  选择银行
+              </view>
+              <view  class='weui-flex__item input-r'>
+                
+                <picker bindchange="bindTxtypeChange" value="{{txinfo.bank}}" range="{{txtypeArray}}" range-key="bank_name">
+                  <text>{{txtypeArray[txtypeindex].bank_name}}</text>
+                </picker> 
+              </view>
+              <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </view>
+          <view class='w-input-item weui-flex'>
+              <view class='input-l'>
+                  输入卡号
+              </view>
+              <view  class='weui-flex__item input-r'>
+                <input class='weui-input' type='number' placeholder='请输入银行卡号' value='{{txinfo.bank_card}}' bindinput='bankChange'></input>
+              </view>
+          </view>
+        </view>  
+      </view>
+      <view class='w-btn-box'>
+        <button catchtap='makewithdrawal' data-url="../shouru-jindu/shouru-jindu">确认提现</button>
+        <view class='w-btn-desc'>预计今天24点之前到账</view>
+      </view>
+  </view> 
+</view>

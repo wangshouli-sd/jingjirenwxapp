@@ -1,0 +1,4 @@
+<view class='w-kefu' catchtap='makephone'>
+    <view class='w-kefu-icon-box'><icon class='iconfont icon-kefu'></icon></view>
+    <view class='w-kefu-text'>客服</view>
+</view>

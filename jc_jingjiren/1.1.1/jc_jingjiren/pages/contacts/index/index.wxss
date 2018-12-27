@@ -1,0 +1,133 @@
+.wreapper {
+  display: flex;
+  flex-direction: row;
+}
+.scrollList {
+ 
+  flex: 1;
+  /* height: 100vh; */
+  width: 704rpx;
+
+}
+.uni-list-cell-divider{
+  position: relative;
+  color: #999;
+  background-color: #f7f7f7;
+  padding: 20rpx;
+  font-size: 40rpx;
+}
+/* 客户列表 */
+.uni-list-cell{
+  background: #f7f7f7;
+  border: 1px solid rgba(0,0,0,0);
+}
+/* 内容放这 */
+.uni-list-cell-navigate{
+  background: #FFFFFF;
+  padding: 20rpx;
+  padding-left: 40rpx;
+  width: 705rpx;
+  margin-bottom: 20rpx;
+}
+.user-info{
+  width:100%;
+  margin-top: 20rpx;
+}
+.user-infobtn button{
+  background: #FFFFFF;
+  border:1px solid rgba(210,210,210,1);
+  border-radius:20rpx;
+  font-size: 24rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-right: 20rpx;
+}
+.user-name{
+  font-size:30rpx;
+  font-family:PingFang-SC-Regular;
+  font-weight:400;
+  color:rgba(0,0,0,1);
+}
+.user-tel{
+  font-size:30rpx;
+  font-family:PingFang-SC-Regular;
+  font-weight:400;
+  color:rgba(0,0,0,1);
+  margin-top: 20rpx;
+}
+.user-desc{
+  font-size:26rpx;
+  font-family:PingFang-SC-Regular;
+  font-weight:400;
+  color:rgba(0,0,0,1);
+  margin-top: 20rpx;
+  line-height: 30rpx;
+  display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+
+}
+.uni-list-cell-navigate text{
+  margin-left: 20rpx;
+}
+/* 右侧字母 */
+.uni-indexed-list-bar {
+  width: 46rpx;
+  /* height: 100vh; */
+  /* background-color: lightgrey; */
+  background: white;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  /* border:1px solid black; */
+}
+.uni-indexed-list-bar.active {
+  background-color: rgb(200, 200, 200);
+}
+.uni-indexed-list-text {
+  color: #aaa;
+  font-size: 22rpx;
+  text-align: center;
+  /* border: 1px solid black; */
+}
+
+.uni-indexed-list-bar.active .uni-indexed-list-text {
+  color: #333;
+}
+
+.uni-indexed-list-text.active,
+.uni-indexed-list-bar.active .uni-indexed-list-text.active {
+  color: #007AFF;
+}
+/* 中间索引框 */
+.indexed-list-alert {
+  position: fixed;
+  z-index: 20;
+  width: 160rpx;
+  height: 160rpx;
+  left: 50%;
+  top: 50%;
+  margin-left: -80rpx;
+  margin-top: -80rpx;
+  border-radius: 80rpx;
+  text-align: center;
+  line-height: 160rpx;
+  font-size: 70rpx;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.wrapper_nodata{
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.wrapper_nodata image{
+  width: 600rpx;
+  height: 500rpx;
+  margin-top: 200rpx;
+}

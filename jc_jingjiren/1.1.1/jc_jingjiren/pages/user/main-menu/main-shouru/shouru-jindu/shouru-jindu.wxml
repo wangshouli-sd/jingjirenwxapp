@@ -1,0 +1,84 @@
+<view class='page-top'>
+  <view class='w-progress-wrapper weui-flex'>
+    <view class='w-progress-left'>
+      <view class='progress-left-line'></view>
+    </view>
+    <view class='w-progress-right weui-flex__item'>
+      <view class='progress-right-item weui-flex item-complete'>
+        <view class='item-icon'>
+          <view><icon class='iconfont icon-tixian'></icon></view>
+        </view>
+        <view class='item-title weui-flex__item'>
+          <view class='item-title-top'>发起提现申请</view>
+          <view class='item-title-bottom'>{{tixianinfo.time}}</view>
+        </view>
+      </view>
+      <view class='progress-right-item weui-flex item-active {{tixianinfo.state == "1"? "item-active":tixianinfo.state == "2"?"item-complete":"nostart" }}'>
+        <view class='item-icon'>
+          <view><icon class='iconfont icon-time'></icon></view>
+        </view>
+        <view class='item-title weui-flex__item'>
+          <view class='item-title-top'>
+            {{tixianinfo.state == "1"? "审核中":tixianinfo.state == "2"?"审核通过":"" }}
+          </view>
+          <view class='item-title-bottom' wx:if="{{tixianinfo.state == '2'}}">
+            {{tixianinfo.check_time}}
+          </view>
+        </view>
+      </view>
+      <view class='progress-right-item weui-flex {{tixianinfo.state == "1"? "item-complete":tixianinfo.state == "2"?"item-active":"nostart" }}'>
+        <view class='item-icon'>
+          <view><icon class='iconfont icon-wancheng'></icon></view>
+        </view>
+        <view class='item-title weui-flex__item'>
+          <view class='item-title-top'>
+            {{tixianinfo.state == "1"? "提现未开始":tixianinfo.state == "2"?"提现中":"" }}
+          </view>
+          <!-- <view class='item-title-bottom'>到账时间：--/--/--</view> -->
+        </view>
+      </view>
+      <view class='progress-right-item weui-flex'>
+        <view class='item-icon'>
+          <view><icon class='iconfont icon-wancheng'></icon></view>
+        </view>
+        <view class='item-title weui-flex__item'>
+          <view class='item-title-top'>完成</view>
+          <!-- <view class='item-title-bottom'>到账时间：--/--/--</view> -->
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='page-bottom'>
+  <view class='w-info-wrapper '>
+    <view class='w-info-item weui-flex'>
+      <view class='w-info-item-l weui-flex__item'>提现单号</view>
+      <view class='w-info-item-r weui-flex__item'>{{tixianinfo.number}}</view>
+    </view>
+    <view class='w-info-item weui-flex'>
+      <view class='w-info-item-l weui-flex__item'>提现金额</view>
+      <view class='w-info-item-r weui-flex__item'>￥{{tixianinfo.money}}</view>
+    </view>
+    <view class='w-info-item weui-flex'>
+      <view class='w-info-item-l weui-flex__item'>提现方式</view>
+      <view class='w-info-item-r weui-flex__item'>{{tixianinfo.typename}}</view>
+    </view>
+    <view class='w-info-item weui-flex'>
+      <view class='w-info-item-l weui-flex__item'>提现人姓名</view>
+      <view class='w-info-item-r weui-flex__item'>{{tixianinfo.truename}}</view>
+    </view>
+     <view class='w-info-item weui-flex'>
+      <view class='w-info-item-l weui-flex__item' wx:if="{{tixianinfo.type == '2'}}">提现银行卡</view>
+      <view class='w-info-item-r weui-flex__item'>{{tixianinfo.bankname}}</view>
+    </view>
+    <view class='w-info-item weui-flex'>
+      <view class='w-info-item-l weui-flex__item'>到账账户</view>
+      <view wx:if="{{tixianinfo.type == '1'}}" class='w-info-item-r weui-flex__item'>{{tixianinfo.alipay}}</view>
+      <view wx:elif="{{tixianinfo.type == '2'}}" class='w-info-item-r weui-flex__item'>{{tixianinfo.bank_card}}</view>
+      <view wx:else class='w-info-item-r weui-flex__item'>微信账户</view>
+    </view>
+  </view>
+  <view class='w-btn-wrapper'>
+      <button catchtap='handleback'>返回</button>
+  </view>
+</view>

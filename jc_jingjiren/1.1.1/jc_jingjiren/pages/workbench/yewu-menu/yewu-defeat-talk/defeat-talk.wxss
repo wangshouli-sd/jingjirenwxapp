@@ -1,0 +1,76 @@
+.wrapper-body{
+  margin: 10rpx -20rpx;
+}
+
+/* 列表相关 */
+.w-card{
+  border-bottom: 20rpx solid rgba(249,248,248,1);
+}
+.w-card-head{
+  padding: 20rpx 30rpx;
+}
+.w-card-head image{
+  width: 34rpx;
+  height: 34rpx;
+  margin-right: 10rpx;
+  border-radius: 6rpx;
+}
+.w-card-body{
+  width:750rpx;
+  background:rgba(249,248,248,1);
+  padding: 20rpx 30rpx;
+}
+.w-card-body image{
+  width:169rpx;
+  height:170rpx;
+  border-radius:10rpx; 
+}
+.card-body-left{
+  width: 190rpx;
+}
+.card-body-right{
+  padding: 10rpx 20rpx;
+}
+.item-title{
+  font-size:30rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(38,38,38,1);
+
+}
+.item-subtitle{
+  font-size:26rpx;
+  font-weight:500;
+  color:rgba(124,124,124,1);
+  margin-top: 20rpx;
+
+  display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+
+}
+.item-user{
+  font-size:24rpx;
+  font-family:PingFang-SC-Regular;
+  font-weight:400;
+  color:#434240;
+  margin-top: 12rpx;
+}
+.item-user text:nth-child(1){
+  margin-right: 20rpx;
+}
+.w-card-foot{
+  text-align: right;
+  border: 1px solid balck;
+  /* height: 60rpx; */
+  padding: 10rpx 30rpx;
+}
+.w-card-foot button{
+  background: #FFFFFF;
+  border:1px solid rgba(210,210,210,1);
+  border-radius:20rpx;
+  font-size: 24rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}

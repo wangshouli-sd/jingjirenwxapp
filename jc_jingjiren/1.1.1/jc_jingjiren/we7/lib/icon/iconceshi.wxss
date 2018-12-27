@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 938529 */
+  src: url('//at.alicdn.com/t/font_938529_yilz6ixv73n.eot');
+  src: url('//at.alicdn.com/t/font_938529_yilz6ixv73n.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_938529_yilz6ixv73n.woff') format('woff'),
+  url('//at.alicdn.com/t/font_938529_yilz6ixv73n.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_938529_yilz6ixv73n.svg#iconfont') format('svg');
+}
+
+.icon-shijian:before { content: "\e60d"; }
+.iconfont{
+	display:inline-block;
+	font-family:iconfont;
+	speak:none;
+	font-style:normal;
+	font-weight:400;
+	font-variant:normal;
+	text-transform:none;
+	text-rendering:auto;
+	line-height:1;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	vertical-align:middle
+}
+.w-icon{
+  display:inline-block;
+  font-family:iconfont;
+  speak:none;
+  font-style:normal;
+  font-weight:400;
+  font-variant:normal;
+  text-transform:none;
+  text-rendering:auto;
+  line-height:1;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  vertical-align:middle;
+font-size:22px;
+color:#7D7D7D;
+
+}

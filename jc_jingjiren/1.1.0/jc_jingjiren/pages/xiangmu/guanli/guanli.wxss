@@ -1,0 +1,348 @@
+/* pages/xiangmu/guanli/guanli.wxss */
+.page{
+  padding: 0rpx;
+  border-top: 1px solid #E5E5E5;
+}
+
+
+/* weui  tab重新定义 */
+
+.weui-tab{
+  height: 89rpx;
+}
+.weui-navbar{
+  border-bottom: none;
+}
+.weui-navbar__item{
+  color: #353637;
+  padding: 13px 0 13rpx 0;
+  /* border: 1px solid black; */
+}
+.weui-navbar__slider{
+  background-color:#7AAFFF;
+}
+.weui-navbar__title{
+  /* border: 1px solid black; */
+}
+.weui-bar__item_on view{
+  color: #7AAFFF;
+}
+.border-s{
+  height: 24rpx;
+  /* width: 1rpx; */
+  border: 1px solid #DCDCDC;
+  margin-top: 33rpx;
+}
+/* tab下标题部分 */
+.weui-tab-desc{
+  height: 146rpx;
+  background: #52a1fd;
+  border-radius: 0 0 30rpx 30rpx;
+}
+.weui-tab-desc-left,.weui-tab-desc-right{
+  /* border: 1px solid red; */
+}
+.weui-tab-desc-title{
+  font-size: 30rpx;
+  color: #FFFFFF;
+  margin: 30rpx 0 0 80rpx;
+}
+.weui-tab-desc-intr{
+  font-size: 24rpx;
+  color: #FFFFFF;
+  margin: 16rpx 0 0 80rpx; 
+}
+.weui-tab-desc-right image{
+  width: 72rpx;
+  height: 52rpx;
+  float: right;
+  margin: 46rpx 116rpx 0 0;
+}
+
+
+/* *******************************列表内容部分 *********************************/
+
+.weui-tab__panel{
+  padding:0rpx; 
+}
+/* 未通过列表 */
+.w-state0-item {
+  border-bottom: 1px solid #E5E5E5;
+  padding-top: 50rpx;
+}
+.state0-item-left image{
+  width: 119rpx;
+  height: 82rpx;
+  margin: 0rpx 50rpx 38rpx 50rpx;
+  border-radius: 18rpx; 
+}
+.state0-title view{
+  font-size: 30rpx;
+  color: #434240;
+  display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+  padding-right: 6rpx;
+}
+.state0-title button{
+  display: inline-block;
+  margin-right: 30rpx;
+  height: 40rpx;
+  /* padding: 6rpx 20rpx; */
+  border-radius: 18rpx;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: #434240;
+  border: 1rpx solid #D3D3D3;
+  background: white;
+}
+.state0-master{
+  margin-top: 18rpx;
+  font-size: 24rpx;
+  color: #434240;
+}
+.state0-master view:nth-child(2){
+  margin-left: 20rpx;
+}
+
+/* 已签约列表 */
+
+.w-state2-item{
+
+  border-bottom: 1px solid #E5E5E5;
+  padding-top: 50rpx;
+  padding-right: 24rpx;
+  
+}
+.state2-item-left image{
+  width: 180rpx;
+  height: 122rpx;
+  margin: 10rpx 30rpx 35rpx 20rpx;
+  border-radius: 30rpx;
+}
+.state2-title view{
+  font-size: 30rpx;
+  color: #373737;
+  display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+  padding-right: 6rpx;
+}
+.state2-title text{
+  font-size: 24rpx;
+  color:#959595;
+}
+.state2-info{
+  margin-top: 26rpx;
+}
+.state2-info .state2-info-item{
+  display: inline-block;
+  font-size: 24rpx;
+  color: #434240;
+  margin-bottom: 10rpx;
+}
+.state2-info .state2-info-item text{
+ 
+  color: #d12e2e;
+}
+.state2-info .state2-info-item view{
+ display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.state2-info .state2-info-item:nth-child(odd) {width: 44%;}
+.state2-info .state2-info-item:nth-child(even){width: 56%;}
+
+/* 已完成列表 */
+.w-state3-wrapper{
+  padding: 23rpx;
+}
+.w-state3-item{
+  border: 1rpx solid #D2D2D2;
+  border-radius: 20rpx;
+  min-height: 290rpx;
+  margin-top: 30rpx;
+  padding: 0 35rpx;
+  box-shadow: 0rpx 26rpx 70rpx -16rpx #b9c9fd;
+  margin-bottom: 80rpx;
+}
+.state3-item-header{
+  border-bottom: 1rpx solid #D2D2D2;
+  
+  height: 69rpx;
+}
+.state3-item-header view{
+  line-height: 69rpx; 
+  font-size: 24rpx;
+  color: #434240;
+  padding: 0rpx 10rpx;
+}
+.state3-item-header view:nth-child(2){
+  text-align: right;
+}
+.state3-item-header view button{
+  display: inline-block;
+  width: 108rpx;
+  height: 40rpx;
+  margin-top: 17rpx;
+  font-size: 22rpx;
+  color: #434240;
+  border-radius: 20rpx;
+  line-height: 40rpx;
+  background: #FFFFFF;
+  border: 1rpx solid #B5B5B5;
+
+}
+.state3-item-body{
+  padding: 50rpx 10rpx 38rpx 0rpx; 
+}
+.state3-item-body-left image{
+  width: 180rpx;
+  height: 122rpx;
+  margin-right: 70rpx;
+  border-radius: 20rpx;
+}
+.state3-title{
+  font-size: 30rpx;
+  color:#262626;
+}
+.state3-time{
+  font-size: 24rpx;
+  color: #434240;
+  margin-top: 14rpx;
+}
+.state3-commission{
+  font-size: 24rpx;
+  color: #434240;
+  margin-top: 6rpx;
+}
+.state3-commission text{
+  color: #d12e2e;
+}
+
+/* 洽谈中列表 */
+.w-state1-item{
+  padding: 20rpx;
+  margin-top: 30rpx;
+  border-bottom: 1rpx solid #EEEEEE; 
+}
+.w-state1-item-head{
+ 
+}
+.state1-item-title{
+  font-size: 30rpx;
+  color: #171717;
+  position: relative;
+}
+.state1-item-title-line{
+  width: 50rpx;
+  height: 6rpx;
+  background:#52A1FD;
+  margin-top: 6rpx;
+  margin-left: 4rpx;
+}
+.state1-item-time{
+  font-size: 16rpx;
+  color:#939292;
+}
+.w-state1-item-body{
+  margin-top: 20rpx;
+  padding: 13rpx;
+}
+.state1-progress{
+  min-height: 100rpx;
+}
+/* .progress-top-line{
+  width: 100%;
+  height: 2rpx;
+  background: #E9844E;
+} */
+.progress-step-item{
+  position: relative;
+}
+.progress-step-line{
+  position: absolute;
+  width: 50%;
+  height: 4rpx;
+  background: #DDDDDD;
+  top: 16rpx;
+}
+.progress-step-line-l{left: 0rpx;}
+.progress-step-line-r{right: 0rpx;}
+
+.progress-bottom-icon{
+  width: 36rpx;height: 36rpx;
+  border: 4rpx solid #DDDDDD;
+  border-radius: 50%;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+.progress-bottom-icon view{
+  background: #DDDDDD;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 5rpx solid white;
+}
+.progress-bottom-icon-more{
+  width: 40rpx;
+  height: 40rpx;
+  background: #DDDDDD;
+  border-radius: 50%;
+  margin: auto;
+  padding: 5rpx;
+  color: white;
+  font-size: 30rpx;
+  line-height: 20rpx;
+  text-align: center;
+  font-weight: bolder;
+}
+.progress-bottom-title{
+  margin-top: 10rpx;
+  text-align: center;
+}
+.state1-progress-bottom .progress-step-item:nth-child(1) .progress-step-line-l,
+.state1-progress-bottom .progress-step-item:last-child .progress-step-line-r{
+  display: none;
+}
+
+.state1-step-complete .progress-step-line-l,
+.state1-step-complete .progress-step-line-r{
+  background: #E9844E;
+}
+.state1-step-complete .progress-bottom-icon{
+  border: 4rpx solid #E9844E;
+}
+.state1-step-complete .progress-bottom-icon view{
+  background: #E9844E;
+}
+.w-state1-item-foot{
+  margin-top: 20rpx;
+}
+.w-state1-item-foot button{
+  /* width:100rpx; */
+  height:40rpx;
+  border:1px solid rgba(181,181,181,1);
+  border-radius:20rpx;
+  display: inline-block;
+  font-size: 24rpx;
+  color: #101010;
+  padding: 0rpx 30rpx;
+  background: white;
+}
+/* 
+.button-hover{
+  background-color: red;
+  color: white;
+} */
+
+.statebtn{
+  background: rgb(254, 240, 240) !important;
+  border: 1px solid rgb(252,214,214) !important;
+  color:rgb(246,108,150) !important;
+
+}

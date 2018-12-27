@@ -1,0 +1,184 @@
+/* pages/renwu/renwu-detail/renwu-detail.wxss */
+/* head */
+.page{
+  padding: 0rpx;
+  padding-bottom: 20rpx;
+}
+.w-banner{
+  width: 100%;
+  height: 330rpx;
+}
+.w-banner image{
+  width: 100%;
+  height: 100%;
+}
+.w-title{
+  padding: 35rpx 20rpx 30rpx 20rpx;
+}
+.w-title-box{
+  display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.w-icon-box icon{
+  font-size: 40rpx;
+}
+.iconfont{
+  width: 34rpx;
+  height: 34rpx;
+  margin-left: 30rpx;
+}
+
+/* body */
+.w-info {
+  padding:25rpx 20rpx;
+  border-bottom: 1px solid #EEEEEE;
+}
+
+.w-info-title text{
+  font-size: 26rpx;
+  color: #323232;
+  font-weight: bold;
+  margin-left: 10rpx;
+}
+.w-info-title text:nth-child(3){
+  color:#B42525;
+}
+/* .w-info-content{margin-top: 20rpx;} */
+.w-info-content view{
+  width: 50%;
+  display: inline-block;
+  margin-bottom: 16rpx;
+}
+.w-info-content view text{
+  color: #6E6D6D;
+  font-size: 22rpx;
+}
+.w-label-box{
+  padding: 16rpx 20rpx 20rpx 20rpx;
+}
+.w-label-box text{
+  padding: 5rpx 14rpx;
+  font-size: 22rpx;
+  color: #3677CB;
+  background: #edf5fc;
+  margin-right: 30rpx;
+}
+
+
+
+
+/* weui  tab重新定义 */
+
+.weui-navbar{
+  /* border: none;
+  width: 550rpx;
+  margin-left: 80rpx; */
+}
+.weui-navbar__item{
+  color: #323232;
+  padding: 13px 0 0 0;
+ 
+}
+.weui-navbar__slider{
+  background-color:#7AAFFF;
+  width: 80rpx;
+}
+.weui-bar__item_on view{
+  color: #7AAFFF;
+}
+.weui-navbar__title{
+  font-size: 34rpx;
+}
+/* weui  tab重新定义 */
+
+
+/* w-intro */
+
+.weui-tab__content{
+  padding: 20rpx;
+  padding-top: 60rpx;
+}
+/* 左侧介绍 */
+
+.w-content-hetong{
+  /* border: 1px solid black; */
+  padding: 10rpx;
+}
+.w-content-hetong image{
+  /* width: 100%;
+  height: 1000rpx; */
+}
+
+/* 右侧流程 */
+.w-content-liucheng{
+ 
+  padding: 20rpx 70rpx 20rpx 120rpx;
+  
+}
+.w-content-liucheng .liucheng-list{
+ 
+}
+.liucheng-listl{
+  width: 5rpx;
+  background: #8ABCF2; 
+}
+.liucheng-listr{
+
+  width: 470rpx;
+  padding-top: 50rpx;
+  margin-left: 30rpx;
+
+}
+.listr-item-top{
+  font-size: 26rpx;
+  color: #616262;
+  padding: 20rpx 0rpx;
+  position: relative;
+  left: -56rpx;
+ 
+}
+.listr-item-bottom{
+  font-size: 26rpx;
+  color: #616262;
+  line-height: 50rpx;
+  background: #F6F8FA;
+  padding: 20rpx 20rpx 20rpx 50rpx;
+}
+.listr-item-bottom text{
+  float: right;
+  font-size: 20rpx;
+  color: #757272;
+}
+.listr-item-top .item-icon{
+  border: 3px solid #8ABCF2;
+  width: 46rpx;
+  height: 46rpx;
+  border-radius: 50%;
+  background: white;
+  padding: 4rpx;
+}
+.listr-item-top .item-title{
+  line-height: 50rpx;
+  margin-left: 28rpx;
+}
+.item-icon view{
+  border: 1px solid #8ABCF2;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+.item-title text{
+  font-size: 40rpx;
+  padding: 0 16rpx;
+}
+
+
+.w-content-kefu{
+  margin: 100rpx auto 50rpx auto;
+  font-size: 30rpx;
+  color: #418CE2;
+  text-align: center;
+  padding: 10rpx 20rpx;
+}

@@ -1,0 +1,205 @@
+/* head */
+
+.page-head {
+  padding: 20rpx;
+}
+
+.head-card {
+  height: 304rpx;
+  border-radius: 20rpx;
+  background: #f6f9fd;
+  box-shadow: 0rpx 2rpx 20rpx 0rpx #c7c7c7;
+  padding: 37rpx 10rpx;
+}
+
+.head-card-l {
+  width: 250rpx;
+  height: 170rpx;
+  border-radius: 20rpx;
+  margin-right: 30rpx;
+  position: relative;
+  margin-top: 20rpx;
+}
+
+.card-l-title {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  right: 10%;
+  text-align: center;
+  font-size: 26rpx;
+  color: #474747;
+}
+
+.head-card-l image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}
+
+.head-card-r {
+}
+
+.card-r-item {
+  font-size: 26rpx;
+  color: #525252;
+  margin-bottom: 20rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* body */
+
+.w-body-title {
+  font-size: 30rpx;
+  color: #525252;
+  text-align: center;
+  margin-top: 20rpx;
+  border-bottom: 1rpx solid#EEEEEE;
+}
+
+.w-body-title-line {
+  width: 83rpx;
+  height: 6rpx;
+  background: #7aafff;
+  position: relative;
+  top: 20rpx;
+  margin: auto;
+}
+
+.w-body-content {
+  padding: 20rpx;
+}
+
+.w-progress-wrapper {
+  padding-left: 100rpx;
+  margin-top: 80rpx;
+}
+
+.progress-right-item {
+  padding: 35rpx 0;
+  position: relative;
+  left: -24rpx;
+  position: relative;
+}
+
+.progress-item-line {
+  position: absolute;
+  width: 4rpx;
+  height: 50%;
+  left: 20rpx;
+  background: #ddd;
+}
+
+.progress-item-line-t {
+  top: 0rpx;
+}
+
+.progress-item-line-b {
+  bottom: 0rpx;
+}
+
+.item-icon {
+  margin-right: 110rpx;
+  position: relative;
+  z-index: 2;
+}
+
+.item-icon view {
+  width: 44rpx;
+  height: 44rpx;
+  background: #ddd;
+  border-radius: 50%;
+}
+
+.item-icon view.symbol {
+  padding: 5rpx;
+  color: white;
+  font-size: 30rpx;
+  line-height: 20rpx;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.item-title {
+  font-size: 30rpx;
+  color: #282828;
+}
+
+.item-time {
+  font-size: 20rpx;
+  color: #a4a4a4;
+  text-align: right;
+}
+
+.aa view {
+  transform: scale(1.6);
+}
+
+.w-progress-right .progress-right-item:last-child .progress-item-line-b,
+.w-progress-right .progress-right-item:nth-child(1) .progress-item-line-t {
+  display: none;
+}
+
+.item-complete .item-icon view, .item-complete .progress-item-line-t,
+.item-complete .progress-item-line-b {
+  background: #418ce2;
+}
+
+.statefinish {
+  color: #67c23a;
+}
+
+.stateongoing {
+  color: #e6a23c;
+}
+
+.w-content-kefu {
+  margin: 100rpx auto 50rpx auto;
+  font-size: 30rpx;
+  color: #418ce2;
+  text-align: center;
+  padding: 10rpx 20rpx;
+}
+
+.weui-flex__itemaa {
+  /* padding: 54rpx 0 34rpx 0; */
+  width: 580rpx;
+  height: 100rpx;
+  /* height:159px; */
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 1px 6px 16px 0px rgba(0, 0, 0, 0.18);
+  border-radius: 20rpx;
+  position: absolute;
+  z-index: 1;
+  left: 100rpx;
+  color: #418ce2;
+  margin:100rpx auto 50rpx auto;
+}
+
+.w-cell-item {
+  /* border: 1px solid black; */
+  margin-top: 40rpx;
+  line-height: 100%;
+  /* height: 80rpx; */
+  color: #418ce2;
+}
+
+.cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.cell-title {
+  margin-left: 72rpx;
+  font-size: 30rpx;
+  color: #418ce2;
+  height: 70rpx;
+  line-height: 70rpx;
+}

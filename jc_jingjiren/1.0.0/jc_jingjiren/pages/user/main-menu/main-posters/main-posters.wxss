@@ -1,0 +1,13 @@
+.saveImg{
+  position: fixed;
+  bottom: 10px;
+  width: 90%;
+  left: 5%;
+  line-height: 50px;
+  z-index: 100;
+}
+.canvas {
+  background-color: rgb(168, 238, 232);
+  height: 500rpx;
+  margin: auto;
+}

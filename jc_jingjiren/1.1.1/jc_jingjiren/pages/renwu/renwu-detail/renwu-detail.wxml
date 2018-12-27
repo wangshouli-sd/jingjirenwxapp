@@ -1,0 +1,137 @@
+<view class='page'>
+  <view class='page-head'>
+      <view class='w-banner'>
+       
+        <swiper  
+          indicator-dots="{{indicatorDots}}" indicator-active-color="rgb(255,255,255)" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+          interval="{{interval}}" duration="{{duration}}" style="height:100%;">
+          <block wx:for="{{detail.slide_path}}" wx:key="*this">
+            <swiper-item>
+              <image src="{{item.path}}" class="slide-image"/>
+            </swiper-item>  
+          </block>
+        </swiper>
+
+        <!-- <image src='{{baseUrlData + detail.imgurl}}'></image> -->
+      </view> 
+      <view class='w-title weui-flex'>
+        <view class='w-title-box weui-flex__item'>
+          <text>[{{category}}]{{detail.name}}</text>
+        </view>
+        
+        <view class='w-icon-box'>
+          <icon class='iconfont icon-shoucang1' wx:if="{{detail.like  == 0 }}" catchtap='makeCollectionChange' data-id='{{detail.id}}'></icon>
+          <icon class='iconfont icon-shoucang2' wx:if="{{detail.like  == 1 }}"  catchtap='makeCollectionChange' data-id='{{detail.id}}' style='color:#f68301;'></icon>
+          
+          <button open-type="share" data-tag="share1" id="btn_share1" style='background:none;display:inline;width:20rpx;magin-left:0rpx;'>
+             <icon class='iconfont icon-icon-test' catchtap='handleshare'></icon>
+          </button>
+        </view>
+      </view>
+      <view class='w-interval'></view>
+  </view>
+  <view class='page-body'>
+     <view class='w-info'>
+        <view class='w-info-title'>
+          <icon class='iconfont icon-yongjin'></icon>
+          <text>预计可得{{yongjin}}金额</text>
+          <text class='red'>{{detail.min_price}}~{{detail.max_price}}元</text>
+        </view>
+        <view class='w-info-content '>
+          <view class=''>
+              <text>项目{{yongjin}}比例：</text>
+              <text>{{detail.vt_price_percent }}%</text>
+          </view>
+          <view class=''>
+             <text>已成功被领取：</text>
+             <text>{{detail.vt_price_total}}</text>
+          </view>
+          <view class=''>
+             <text>已发放{{yongjin}}：</text>
+             <text>{{detail.vt_price_already}}</text>
+          </view>
+          <view class=''>
+             <text>预计{{yongjin}}：</text>
+             <text>{{detail.min_price}}~{{detail.max_price}}元</text>
+          </view>
+
+        </view>
+     </view>
+     <view class='w-label-box'>
+
+        <text wx:for="{{detail.tags}}" wx:key="*this">{{item}}</text>
+     </view>
+     <view class='w-introduce page__bd'>
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+            </view>
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                    <view class='w-content-jieshao'>
+                        <!-- <view class='' style='width:220rpx;'> //上面+weui-flex
+                          <view class='jieshao-image-box'>
+                            <image src='http://192.168.0.201:88/images/xiangmu.png'></image>
+                          </view>
+                        </view> -->
+                        <view class='weui-flex__item'>
+                          <view class='jieshao-title'> 
+                              项目介绍
+                          </view>
+                          <view class='jieshao-desc'>                         
+                              <rich-text nodes="{{detail.description}}" bindtap="tap"></rich-text>
+                          </view>
+                        </view>
+                    
+                    </view>
+                </view>
+                <view class="weui-tab__content weui-tab__content2" hidden="{{activeIndex != 1}}">
+                    <view class='w-content-liucheng weui-flex'> 
+                        <view class='liucheng-list liucheng-listl '>
+                            
+                        </view> 
+                        <view class='liucheng-list liucheng-listr '>
+                            
+                            <block wx:for="{{process}}" wx:key="*this">
+                              <view class='liucheng-listr-item'>
+                                  <view class='listr-item-top weui-flex'>
+                                      <view class='item-icon'><view></view></view>
+                                      <view class='item-title'>第<text>{{item.order}}</text>步</view>
+                                  </view>
+                                  <view class='listr-item-bottom'>
+                                      <!-- 微信公众平台账号 -->
+                                      {{item.process_name}}
+                                  </view>
+                              </view>
+                            </block>
+                            
+                        </view>
+                    </view>
+                
+                
+                </view>
+            </view>
+        </view>
+     </view>
+     <view class='page-foot'>
+        <view class='w-btn-box weui-flex'>
+            <view class='weui-flex__item'>
+              <button catchtap='navswitchTab' data-url='../renwu-index/renwu-index'><icon class='iconfont icon-home'></icon> 任务大厅</button>
+            </view>
+            <view class='weui-flex__item'>
+              <!-- <button class='seticon-btn' open-type='getUserInfo' bindgetuserinfo="getUserInfo" >
+                <icon class='iconfont icon-bianji seticon'></icon>
+              </button> -->
+              <button  open-type='getUserInfo' bindgetuserinfo='navigateTopage' data-id='{{detail.id}}' data-url='../renwu-submit/renwu-submit'><icon class='iconfont icon-fabu'></icon> 提交信息</button>
+            </view>
+        </view>
+     </view>
+  </view>
+</view>
+<view wx:if="{{!showView}}" class='cover' bindtap='handleCoverTap'></view>
+<include src="../../template/kefu.wxml"/>

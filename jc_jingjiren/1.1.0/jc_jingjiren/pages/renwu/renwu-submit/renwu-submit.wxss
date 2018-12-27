@@ -1,0 +1,48 @@
+/* pages/renwu/renwu-submit/renwu-submit.wxss */
+.page-body{
+   border-top: 1px solid#E5E5E5;
+}
+.w-cell-item{
+  padding: 60rpx 22rpx 10rpx 22rpx;
+  border-bottom: 1px solid#E5E5E5;
+}
+.w-cell-item-title{
+  font-size: 30rpx;
+  color: #000000;
+  /* font-weight: bold; */
+}
+.w-cell-item-input{
+  margin-top: 10rpx;
+}
+
+.placeholderstyle{
+  color: #CACACA;
+  font-size: 26rpx;
+}
+.weui-textarea{
+  margin-top: 30rpx;
+  height: 200rpx;
+}
+
+.w-submit{
+  padding: 20rpx;
+}
+.w-submit button{
+  background: #52A1FD;
+  height: 83rpx;
+  border-radius: 37rpx;
+  color: white;
+  font-size: 32rpx;
+  line-height: 80rpx;
+  margin-top: 80rpx;
+}
+
+
+
+.weui-agree__link{
+  color:#00994D;
+}
+.w-type-item-radio{
+  margin-top: 5rpx;
+  margin-right: 10rpx;
+}

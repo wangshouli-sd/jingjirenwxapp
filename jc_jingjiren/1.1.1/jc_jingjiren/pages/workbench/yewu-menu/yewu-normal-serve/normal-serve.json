@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "服务中业务",
+  "usingComponents": {
+    "i-icon": "../../../../we7/dist/icon/index"
+  }
+}

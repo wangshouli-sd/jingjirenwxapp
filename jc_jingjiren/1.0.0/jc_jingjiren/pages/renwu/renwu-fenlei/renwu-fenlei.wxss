@@ -1,0 +1,146 @@
+/* head */
+.w-search{
+  /* border: 1px solid black; */
+  /* background:url(http://192.168.0.201:88/images/search.png); */
+  background-repeat: no-repeat;
+  background-size: 40rpx 40rpx;
+  background-position: 640rpx center;
+  background-origin:20rpx; 
+}
+.w-search input{
+  width:710rpx;
+  height:69rpx;
+  border:0.51px solid rgba(160,160,160,1);
+  border-radius:35rpx;
+
+  padding-left: 30rpx;
+  padding-right: 80rpx;
+  
+}
+.w-classification{
+  padding: 40rpx 0;
+}
+.w-classification-item{
+  /* border: 1px solid black; */
+  display: inline-block;
+  width: 33%;
+  padding: 10rpx 0;
+  height: 96rpx;
+  vertical-align: middle;
+}
+.w-classification-item-box{
+  width:200rpx;
+  height:60rpx;
+  border:1.22rpx solid rgba(191,191,191,1);
+  border-radius:25rpx;
+  display: inline-block;
+}
+.w-classification-item-box.classifiactive{
+  color: #FF6600;
+  border: 1rpx solid #FF6600;
+}
+.w-classification-item-box view{
+   text-align: center;
+  line-height: 60rpx;
+  padding: 0rpx 10rpx;
+
+
+  display: -webkit-box; 
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+
+}
+.w-interval{
+  margin: 0 -20rpx;
+}
+/* body */
+/* weui  tab重新定义 */
+
+.weui-navbar{
+  border: none;
+  width: 550rpx;
+  margin-left: 80rpx;
+}
+.weui-navbar__item{
+  color: #323232;
+  padding: 13px 0 0 0;
+}
+.weui-navbar__slider{
+  background-color:#7AAFFF;
+  width: 80rpx;
+}
+.weui-bar__item_on view{
+  color: #7AAFFF;
+}
+.weui-tab{
+  height: 89rpx;
+}
+
+/* 列表 */
+.w-content-wrapper{
+  padding-top: 30rpx;
+}
+.list-item{
+  margin-top: 32rpx;
+}
+.item-left{
+  width: 284rpx;
+  height: 194rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.item-left image{
+  width: 100%;
+  height: 100%;
+}
+.item-left .placeholder{
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.item-left .placeholder view{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 37rpx;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 20rpx;
+  color: #FFFFFF;
+  text-align: center;
+}
+.item-right{
+  padding-left: 39rpx;
+}
+.item-right .placeholder{
+  height: 100%;
+}
+.item-title{
+  color: #3A3A3A;
+  font-size: 36rpx;
+  margin-top: 20rpx;
+
+  display: -webkit-box; 
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.item-desc{
+  font-size: 26rpx;
+  color: #7C7C7C;
+  display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+  margin-top: 10rpx;
+}
+.item-info{
+  font-size: 22rpx;
+  color: #FF6600;
+  margin-top: 8rpx;
+}
+.item-info view{
+  float: left;
+  width: 50%;
+}

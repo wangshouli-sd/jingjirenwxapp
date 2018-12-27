@@ -1,0 +1,56 @@
+<view class='page'>
+  <view class='w-img-box'>
+    <image src='../../../images/pic/unpass.png'></image>
+  </view>
+  <view class='w-title'>审核未通过</view>
+  <view class='w-desc'>
+    非常抱歉，本次审核未通过
+  </view>
+  <view class='w-intr'>
+    原因：{{statecase}}
+  </view>
+  <!-- <view class='w-foot-info'>
+    对此项目有疑问？
+        <view class='w-content-kefu' catchtap='makePhoneCall' >
+        单击此处联系电话客服
+      </view> 
+       <view class='w-content-kefu' catchtap='makeKefu' >
+        <button class='btn1' open-type='contact' style='font-size:26rpx;color:#B0B0B0; '> 
+        <view>单击此处联系在线客服</view>
+      </button>
+        
+      </view>  -->
+
+  <view class="{{showView?'hide':'show'}}">
+    <view class='weui-flex__itemaa' style='display:inline-table'>
+      <view style='display:inline-table'>
+        <view style='display:inline-table;width:280rpx;'>
+          <button style='background:none;border:none;' catchtap='makephone'>
+            <icon class='iconfonts icon-dianhua-copy'></icon>
+            <view style='font-size:26rpx;'>拨打电话</view>
+          </button>
+        </view>
+      </view>
+
+      <view style='display:inline-table'>
+        <view style='display:inline-table;width:280rpx;'>
+          <button open-type='contact' style='background:none;border:none;' catchtap='olinekefu'>
+            <icon class='iconfonts icon-kefu'></icon>
+            <view style='font-size:26rpx;'>在线客服</view>
+          </button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{!showView}}" class='cover' bindtap='handleCoverTap'></view>
+
+
+  <view class="w-cell-item weui-flex {{showView?'show':'show'}}" data-url='' catchtap='showButton'>
+    <view class='w-foot-info'>
+      对此项目有疑问？
+      <view style='display:inline-table;'>
+        <text>点击此处联系客服</text>
+      </view>
+    </view>
+  </view>
+</view>

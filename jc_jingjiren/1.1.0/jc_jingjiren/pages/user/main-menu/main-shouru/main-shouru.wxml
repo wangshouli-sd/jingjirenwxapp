@@ -1,0 +1,38 @@
+
+<view class=''>
+    <view class='page-head' style='background-image:url("");'>
+      <image class='page-head-backimg' src='../../../../images/pic/shouru_back.png'></image>
+        <view class='headimg_box'>
+           <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <view class='head_name'>
+            <open-data type="userNickName"></open-data>
+        </view>
+        <view  class='head_id'>
+            ID：{{onlyid}}
+        </view>
+    </view>
+    <view class='page-body'>
+      <view class='grid_box'>
+         <view class='grid_box-item' catchtap='navigatetopage' data-url="shouru-ketixian/shouru-ketixian">
+            <view class='item-icon-box'><icon class='iconfont icon-qian'></icon></view>
+            <view class='item-title'>可提{{yongjin}}</view>
+         </view> 
+         <view class='grid_box-item' catchtap='navigatetopage' data-url='shouru-tixianmingxi/shouru-tixianmingxi'>
+            <view class='item-icon-box'><icon class='iconfont icon-wancheng' style='color:#65BBFA;'></icon></view>
+            <view class='item-title'>已提{{yongjin}}</view>
+         </view>
+         <view class='grid_box-item' catchtap="{{tixian?'navigatetopage':'navigatetofalse'}}" data-url='shouru-jindu/shouru-jindu'>
+            <view class='item-icon-box'><icon class='iconfont icon-time' style='color:#E51702;'></icon></view>
+            <view class='item-title'>提现进度</view>
+         </view>
+         <view class='grid_box-item' catchtap='navigatetopage' data-url='shouru-yongjinmingxi/shouru-yongjinmingxi'>
+            <view class='item-icon-box'><icon class='iconfont icon-laiyuan' style='color:#EFE149;'></icon></view>
+            <view class='item-title'>{{yongjin}}来源</view>
+         </view>
+         <view class='line-ver'></view>
+         <view class='line-hor'></view>
+      </view>
+    </view>
+</view>
+<!-- 图标还没改 -->

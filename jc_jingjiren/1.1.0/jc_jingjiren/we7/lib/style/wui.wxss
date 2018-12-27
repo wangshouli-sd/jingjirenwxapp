@@ -1,0 +1,123 @@
+/* -------------------------------单页面模板--------------start------------------- */
+
+/* 没有更多数据------template/noMoreData.wxml */  
+.w-nodata-imgBox{
+  width:452rpx;
+  height:450rpx;
+  margin-top: 117rpx;
+  margin-left: 197rpx;
+}
+.w-nodata-imgBox image{
+  width: 100%;
+  height: 100%;
+}
+.w-nodata-title{
+  font-size: 26rpx;
+  color: #4B4747;
+  margin-top: 50rpx;
+  text-align: center;
+}
+
+/*悬浮 客服 ------template/kefu.wxml */
+.w-kefu{
+  position: fixed;
+  right: 20rpx;
+  color:#F78903;
+  z-index: 100;
+  bottom: 200rpx;
+  text-align: center;
+  padding: 10rpx;
+  /* background: white; */
+}
+.w-kefu-icon-box{
+  text-align: center;
+}
+.w-kefu icon{
+  font-size: 50rpx;
+  width: 100%;
+  height: 100%;
+  margin-left: 0rpx;
+  top: 0rpx
+}
+.w-kefu-text{
+  font-size: 26rpx;
+}
+
+/* 顶部阴影 ------template/shadowTop.wxml */
+.w-top-shadow{
+  box-shadow: 0rpx 0rpx 26rpx 4rpx #D2D2D2;
+  position: fixed;
+  top: 0rpx;
+  left: 0rpx;
+  right: 0rpx;
+}
+
+/* -------------------------------单页面模板---------------end-------------------- */
+
+/* -------------------------------页面内嵌相同部分---------start------------------- */
+/* 间隔线 */
+.w-interval{
+  height: 40rpx;
+  background: #f0eff5;
+}
+
+/* 选择框 选中样式 wui */
+.w-type-item-radio{
+  border: 1px solid #B5B5B5;
+  height: 30rpx;
+  width: 30rpx;
+  border-radius: 50%;
+  padding: 6rpx;
+}
+.w-type-item-radio view{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #B5B5B5;
+}
+
+
+/* 去除btn重复边框 */
+button::after{
+  border: none;
+}
+
+
+
+/* 公告 */
+.w-gonggao-wrapper{
+  /* border: 1rpx solid red; */
+  overflow: hidden;
+  height: 100%;
+}
+.w-gonggao-box{
+  width: 100%;
+  height: 50rpx;
+}
+.w-gonggao-box-animition{
+  transition: all 0.4s
+}
+/* .w-gonggao-item{
+  color:#494949;
+  padding: 0 10rpx;
+
+  display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+
+  font-size: 22rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+
+.w-gonggao-line{
+  width: 3rpx;
+  height: 36rpx;
+  margin-top: 7rpx;
+  background:rgb(167, 167, 167);
+  margin:7rpx 30rpx 0rpx 30rpx;
+} */
+
+

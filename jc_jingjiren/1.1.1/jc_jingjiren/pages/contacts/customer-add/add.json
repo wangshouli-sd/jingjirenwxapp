@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "添加联系人",
+  "usingComponents": {
+    "i-icon": "../../../we7/dist/icon/index",
+    "i-panel": "../../../we7/dist/panel/index"
+  }
+}

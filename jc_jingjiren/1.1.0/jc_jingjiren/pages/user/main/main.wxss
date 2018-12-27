@@ -1,0 +1,154 @@
+/* pages/user/main/main.wxss */
+.page{
+  padding: 0rpx;
+}
+.page-head{
+  /* height: 200rpx; */
+  background: #F1F1F1;
+}
+.userinfo-avatar {
+  overflow:hidden;
+  display: block;
+  width: 125rpx;
+  height: 125rpx;
+  margin: 48rpx 48rpx 0 64rpx; 
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.head-left view image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 4rpx 8rpx 20rpx 0rpx #75bad7;
+}
+.head-right .iconfont{
+  font-size: 36rpx;
+  font-weight: 300;
+  color: #A9ACBB;
+}
+.user-name{
+  margin-top: 60rpx;
+  font-size: 36rpx;
+  color: #4E4F4F;
+}
+.user-id{
+  font-size: 24rpx;
+  margin-top: 20rpx;
+  color: #A9ACBB;
+}
+.user-state{
+  font-size: 24rpx;
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+}
+.seticon-btn{
+  margin-top: 68rpx;
+  margin-right: 52rpx;
+  background: rgba(0, 0, 0, 0);
+  padding: 10rpx;
+}
+.seticon{
+  
+  width: 36rpx;
+  height: 36rpx;
+  /* border: 1px solid #A9ACBB; */
+  color: #A9ACBB
+}
+.statetag{
+  color:white;
+  padding: 5rpx 10rpx;
+  font-size: 24rpx;
+  border-radius: 6rpx;
+}
+.statetagfalse{background: #E64340}
+.statetag0{background: #E64340}
+.statetag1{background: #99CCFF}
+.statetag2{background: #33CC33}
+.statetag3{background: #FF6600}
+/* body */
+.w-body-wallet{
+  padding: 54rpx 0 34rpx 0;
+  border-bottom: 2px solid #eeeeee;
+}
+.w-body-wallet .weui-flex__item{
+  
+  text-align: center;
+}
+.w-body-wallet .weui-flex__item text{
+  font-size: 30rpx;
+  color:#A9ACBB;
+}
+.w-body-wallet .weui-flex__item button{
+  display: inline-block;
+}
+.body-wallet-item view:nth-child(1){
+ 
+}
+.body-wallet-item view:nth-child(2){
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: #1A1A1A;
+}
+.body-wallet-item view:nth-child(1) button{
+  color:#A9ACBB; 
+  font-size: 20rpx;
+  width: 80rpx;
+  height: 36rpx;
+  border-radius: 8rpx;
+  padding: 0rpx;
+  line-height: 36rpx;
+  position: relative;
+  top: 6rpx;
+  left: 8rpx;
+}
+.border-s{
+  border: 1px solid #DCDCDC;
+  height: 56rpx;
+  margin-top: 20rpx;
+}
+
+
+/* body 列表菜单 */
+.w-cell-wrapper{
+  margin: 93rpx 0 0 93rpx;
+  padding-bottom: 50rpx;
+}
+.w-cell-item{
+  /* border: 1px solid black; */
+  margin-top: 40rpx;
+  line-height: 100%;
+  /* height: 80rpx; */
+}
+.w-cell-item .iconfont{
+  width: 50rpx;
+  height: 50rpx;
+  font-size: 40rpx;
+  color: #636984;
+  top: 4rpx;
+}
+.cell-title{
+  margin-left: 72rpx;
+  font-size: 30rpx;
+  color: #363636;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.weui-badge{
+  position: relative;
+  top: 10rpx;
+}
+
+.navposterbtn{
+  
+  background: rgba(0, 0, 0, 0);
+  font-size: 30rpx;
+  line-height: 35rpx;
+  color: #363636;
+  margin-top: 14rpx;
+  width: auto;
+  padding: 0rpx;
+  text-align: left;
+  /* line-height:  */
+}

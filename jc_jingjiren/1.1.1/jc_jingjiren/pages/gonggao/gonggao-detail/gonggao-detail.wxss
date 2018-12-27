@@ -1,0 +1,21 @@
+/* pages/gonggao/gonggao-detail/gonggao-detail.wxss */
+.page{
+  margin-top: 20rpx;
+}
+.w-article-title{
+  /* border: 1px solid black; */
+  padding: 10rpx;
+  font-size: 34rpx;
+  color: #1A1A1A;
+} 
+.w-article-time{
+  font-size: 20rpx;
+  color:#616161;
+  padding: 20rpx;
+}
+.w-article-content{
+  font-size: 24rpx;
+  color:#1A1A1A;
+  padding: 10rpx;
+  line-height: 46rpx;
+}

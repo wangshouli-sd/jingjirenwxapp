@@ -1,0 +1,92 @@
+/* pages/user/renzheng-progress/renzheng-progress.wxss */
+.w-img-box{
+  margin: 87rpx auto 0rpx auto;
+  width: 172rpx;
+  height: 172rpx;
+}
+.w-img-box image{
+  width: 100%;
+  height: 100%;
+}
+.w-title{
+  text-align: center;
+  font-size: 30rpx;
+  margin-top: 70rpx;
+  color: #999A9A;
+}
+.w-progress{
+  width: 280rpx;
+  /* border: 1px solid black; */
+  margin: auto;
+  padding: 2rpx;
+  margin-top: 90rpx;
+}
+.w-progress-left{
+  min-height: 200rpx;
+  width: 5rpx;
+  background: #A7A9AA;
+  margin-top: 10rpx;
+  margin-bottom: 12rpx;
+  position: relative;
+  /* border: 1px solid black; */
+}
+.progress-l-line{
+  position: absolute;
+  background: #3D8BFF;
+  top: 0rpx;
+  left: 0rpx;
+  right: 0rpx;
+  /* height: 80%; */
+}
+.w-progress-right{
+  min-height: 200rpx;
+}
+.progress-r-item{
+  position: relative;
+  left: -12rpx;
+  margin-top: 114rpx;
+}
+.w-progress-right .progress-r-item:nth-child(1){
+  margin-top: 0rpx;
+}
+.item-icon{
+  width: 20rpx !important;
+  height: 20rpx;
+  border-radius: 10rpx;
+  background: #A7A9AA;
+  margin-right: 87rpx;
+  margin-top: 10rpx;
+  /* border: 1rpx solid black; */
+}
+.item-icon-complate{
+  background: #3D8BFF;
+}
+.item-complate{
+  color: #3D8BFF !important;
+}
+.item-title{
+  color: #A7A9AA;
+  font-size: 30rpx;
+}
+.item-icon view{
+  width: 8rpx;
+  height: 8rpx;
+  background: #78abf8;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 6rpx;
+}
+.w-btn-wrapper{
+  margin-top: 200rpx;
+}
+
+.w-btn-wrapper button{
+  width:264rpx;
+  height:59rpx;
+  border:0.81rpx solid rgba(160,160,160,1);
+  border-radius:26rpx;
+  background: white;
+  line-height: 59rpx;
+  font-size: 30rpx;
+  color: #1D1D1D;
+}

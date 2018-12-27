@@ -1,0 +1,17 @@
+
+<view class='page'>
+    <view class='page-body'>
+      <view class='w-headimg-box'>
+          <image src='../../../images/pic/sun.png'></image>
+      </view>
+      <view class='w-img-box'>
+          <image src='../../../images/pic/guang.png'></image>
+      </view>
+      <view class='w-title'>请认证</view>
+      <view class='w-title2'>请先实名认证</view>
+      <view class='w-btn-box'>
+        <button catchtap='navigatetopage' data-url='../renzheng-idc/renzheng-idc'>知道了</button>
+      </view>
+    </view>
+    
+</view>

@@ -1,0 +1,98 @@
+<!-- <view class='w-kefu'>
+  <view catchtap='makephone'>
+    <view class='w-kefu-icon-box'>
+     <image class="kf_image" src="../../../images/pic/phone.png" style='width:57rpx;height:57rpx;'></image>
+    </view>
+    <view class='w-kefu-text'>拨打电话</view>
+  </view>
+  <view class='o-kefu' catchtap='olinekefu'>
+    <view class='w-kefu-text' >
+      <button class='btn1' open-type='contact' style='font-size:26rpx;color:#F78903;background:none;border:none;' >
+        <icon class='iconfont icon-kefu' ></icon>
+        <view>在线客服</view>
+      </button>
+    </view>
+  </view>
+</view> -->
+<!-- 显示客服 -->
+<view class="w-kefu {{showView?'show':'hide'}}">
+  <button class='show-button' bindtap='showButton' style='font-size:26rpx;color:#52a1fd;background:none;border:none;'>
+    <icon class='iconfont icon-kefu'></icon>
+    <view>在线客服</view>
+  </button>
+</view>
+
+<view class='w-kefua'>
+  <view class=" {{showView?'hide':'show'}}">
+    <button class='btn1' style='font-size:26rpx;color:#52a1fd;margin-top:25rpx;background:none;border:none;'  catchtap='makephone'>
+      <icon class='iconfont icon-dianhua-copy'></icon>
+      <view class='w-kefu-text'>拨打电话</view>
+    </button>
+    
+    <button class='btn1' open-type='contact' style='font-size:26rpx;color:#52a1fd;background:none;border:none;margin-top:25rpx;'   catchtap='olinekefu'>
+      <icon class='iconfont icon-kefu'></icon>
+      <view class='w-kefu-text'>在线客服</view>
+    </button>
+    
+  </view>
+  <!-- <view class="{{showView?'hide':'show'}}">
+    <button class='show-button' bindtap='showButton' style='font-size:30rpx;color:#52a1fd;background:none;border:none; height:70rpx;'>
+      <view>取消</view>
+    </button>
+  </view> -->
+</view>
+
+<!-- <view class="{{showView?'hide':'show'}}">
+  <view class='w-kefua'>
+    <view catchtap='makephone' style='display:inline-table'>
+      <view class='.w-kefua-icon-box'>
+        <button class='btn1' style='font-size:26rpx;color:#F78903;margin-top:25rpx;background:none;border:none;'>
+          <icon class='iconfont icon-dianhua-copy'></icon>
+          <view class='w-kefu-text'>拨打电话</view>
+        </button>
+      </view>
+    </view>
+    <view class='o-kefu' catchtap='olinekefu' style='display:inline-table'>
+      <view class='.w-kefua-icon-box'>
+        <button class='btn1' open-type='contact' style='font-size:26rpx;color:#F78903;background:none;border:none;margin-top:25rpx;'>
+          <icon class='iconfont icon-kefu'></icon>
+          <view class='w-kefu-text' style='margin-top:5rpx;'>在线客服</view>
+        </button>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="{{showView?'hide':'show'}}">
+  <button class='show-button' bindtap='showButton' style='font-size:26rpx;color:#F78903;background:none;border:none;'>
+    <view>取消</view>
+  </button>
+</view> -->
+
+
+<!-- <view class='w-kefu'>
+  <view class='show'>
+     <button class='show-button' bindtap='showButton'>
+      <icon class='iconfont icon-kefu'></icon>
+      <view>在线客服</view>
+    </button>
+
+  </view>
+
+  <view class='hide'>
+    <view catchtap='makephone'>
+      <view class='w-kefu-icon-box'>
+        <image class="kf_image" src="../../../images/pic/phone.png" style='width:57rpx;height:57rpx;'></image>
+      </view>
+      <view class='w-kefu-text'>拨打电话</view>
+    </view>
+    <view class='o-kefu' catchtap='olinekefu'>
+      <view class='w-kefu-text'>
+        <button class='btn1' open-type='contact' style='font-size:26rpx;color:#F78903;background:none;border:none;'>
+          <icon class='iconfont icon-kefu'></icon>
+          <view>在线客服</view>
+        </button>
+      </view>
+    </view>
+  </view>
+
+</view> -->

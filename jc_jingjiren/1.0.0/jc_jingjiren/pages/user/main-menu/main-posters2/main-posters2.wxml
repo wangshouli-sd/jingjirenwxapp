@@ -1,0 +1,6 @@
+<view class='wrapper'>
+  <canvas canvas-id="postercanvas" class="canvas" style="width:{{windowWidth*0.8}}px;height:{{windowHeight*0.8}}px;">
+  <!-- <canvas canvas-id="postercanvas" class="canvas" style="width:100%;height:500rpxpx;"> -->
+  </canvas> 
+  <button  class='saveImg weui-btn' catchtap='save'>保存到手机</button>
+</view>

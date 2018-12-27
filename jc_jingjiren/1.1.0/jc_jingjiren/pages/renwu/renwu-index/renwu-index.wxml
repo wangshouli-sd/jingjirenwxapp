@@ -1,0 +1,96 @@
+<view class="page">
+    <view class="page-section page-section-spacing swiper">
+      <swiper  
+        indicator-dots="{{indicatorDots}}" indicator-active-color="rgb(255,255,255)" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+        interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+        <block wx:for="{{banner}}" wx:key="*this">
+          <swiper-item>
+            <image src="{{item.imgurl}}" class="slide-image"/>
+          </swiper-item>  
+        </block>
+      </swiper>
+    </view>  
+    <view class='w-title'>
+      <view class='w-title-border'>
+         <span class="w-title-text">最新项目</span >
+      </view>
+    </view>
+    <view class='w-desc'>
+      <view>所有梦想和机会终会在这里相遇</view>
+    </view>
+
+    <view class='page-body'>
+        <view class='w-project' style='background-image:url()' > 
+          <!-- 暂不支持本地背景图  用图片代替 -->
+          <image src='../../../images/pic/back01.png' class='w-project-backimg'></image>
+            <view class='w-project-wrapper'>
+              
+              <block wx:for='{{xmtab}}' wx:key="item" class=''>
+                <view class='w-project-item' catchtap='navigateTopage' data-url='../renwu-fenlei/renwu-fenlei' data-cate='{{item.url}}'  data-name='{{item.category}}'>
+                  <view class='pro-icon'><image src='{{item.path}}'></image></view> 
+                  <view class='pro-title'>{{item.name}}</view>
+                  <view class='pro-desc'>{{item.title}}</view>
+                </view>
+              </block>
+            </view>
+        </view>
+        <view class='w-gonggao weui-flex'>
+          
+               
+            <view>
+              <view class="placeholder gonggao-placeholder">公告</view>
+            </view>
+            <view class='w-gonggao-icon'><icon class='iconfont icon-gonggao'></icon></view>
+            <view class='w-gonggao-line'></view>
+            <view class="weui-flex__item">
+                <view class="w-gonggao-wrapper ">
+                  
+                  <view class='w-gonggao-box {{animation?"w-gonggao-box-animition":""}}' style='transform: translateY({{translateY}})' >
+                    <block wx:for="{{gglist}}" wx:key="*this">
+                      <view class='w-gonggao-item' data-id='{{item.id}}' catchtap='navigateToDetail' data-url='../../gonggao/gonggao-detail/gonggao-detail'>{{item.title}}</view>
+                    </block>
+                  </view>
+                </view>
+            </view>
+            <view catchtap='navigateTopage' data-url='../../gonggao/gonggao-list/gonggao-list'>
+              <view class="placeholder more-placeholder">更多></view>
+            </view>
+           
+        </view>
+
+        <view class='w-renwulist'>
+          <block  wx:for="{{renwuList}}"  wx:key="*this">
+            <view class='list-item weui-flex' catchtap='navigateToDetail' data-url='../renwu-detail/renwu-detail' data-id='{{item.id}}'>
+                <view class='item-left'>
+                  <view class="placeholder">
+                      <image src='{{item.img_path}}'></image>
+                      <view>预计可得{{yongjin}}<text>{{item.min_price}}~{{item.max_price}}</text>元</view>
+                  </view>
+                </view>
+                <view class="weui-flex__item item-right">
+                  <view class="placeholder">
+                    <view class='item-title'>{{item.name}}</view>
+                    <view class='item-desc'>{{item.description}}</view>
+                    <view class='item-info'>
+                        <view>{{yongjin}}比例:{{item.vt_price_percent}}%</view>
+                        <view>已发放:{{item.vt_price_already}}元</view>
+                        <view>已成交:{{item.vt_price_total}}单</view>
+                        <view>申请人数:{{item.vt_project_count}}人</view>
+                    </view>
+                  </view>
+                </view> 
+            </view>
+          </block>
+
+          <view wx:if="{{nomoredata}}">
+            <include src="../../template/noMoreData.wxml"/>
+          </view>         
+        </view> 
+    </view>
+</view>
+
+<!-- <modal title="授权提示" hidden="{{false}}" no-cancel="false" bindconfirm="modalConfirm">
+  <view> 151651
+    <button open-type="getUserInfo">授权信息</button>
+  </view>
+</modal> -->

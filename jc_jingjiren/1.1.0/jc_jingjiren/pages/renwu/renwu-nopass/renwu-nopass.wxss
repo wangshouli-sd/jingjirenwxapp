@@ -1,0 +1,43 @@
+
+page,.page{
+  background: rgb(249, 249, 249)
+}
+.w-img-box{
+  width: 368rpx;
+  height: 344rpx;
+  margin: auto;
+  margin-top: 90rpx;
+}
+.w-img-box image{
+  width: 100%;
+  height: 100%;
+}
+.w-title{
+  font-size: 48rpx; 
+  color:#747474;
+  text-align: center;
+  margin-top: 8rpx;
+}
+.w-desc{
+  font-size: 30rpx;
+  color: #747474;
+  text-align: center;
+  width: 500rpx;
+  margin: auto;
+  margin-top: 60rpx;
+}
+.w-intr{
+  font-size: 30rpx;
+  color: #747474;
+  margin-top: 24rpx;
+  text-align: center;
+  width: 500rpx;
+  margin: auto;
+  margin-top: 24rpx;
+}
+.w-foot-info{
+  font-size: 24rpx;
+  color:#B0B0B0;
+  margin-top: 260rpx;
+  text-align: center;
+}

@@ -1,0 +1,85 @@
+/* head */
+/* weui  tab重新定义 */
+page{
+  background: #f5f5f9;
+}
+.weui-navbar{
+  border: none;
+  width: 650rpx;
+  margin-left: 40rpx;
+}
+.weui-navbar__item{
+  color: #323232;
+  padding: 13px 0 0 0;
+}
+.weui-navbar__slider{
+  background-color:#7AAFFF;
+  width: 130rpx;
+  height: 4rpx;
+}
+.weui-bar__item_on view{
+  color: #7AAFFF;
+}
+.weui-tab{
+  height: 89rpx;
+  /* border: 1px solid black; */
+  background: rgb(255, 255, 255);
+}
+.w-loadmore{
+  padding-top: 80rpx;
+}
+.weui-loadmore__tips_in-line{
+  background:  #f5f5f9;
+}
+
+
+/* 列表 */
+.item-l,.item-r{
+  /* border: 1px solid black; */
+}
+.list-item{
+  /* border: 1px solid black; */
+  border-bottom: 1rpx solid #E5E5E5;
+  padding: 80rpx 26rpx 15rpx 26rpx;
+}
+.item-l-l-imgbox{
+  width: 105rpx;
+  height: 105rpx;
+  margin-right: 37rpx;
+  border-radius: 50%;
+  overflow: hidden;
+
+}
+.item-l-l-imgbox image{
+  width: 100%;
+  height: 100%;
+}
+.item-l-r-name{
+  font-size: 30rpx;
+  color: #1F1F1E;
+  margin-top: 10rpx;
+}
+.item-l-r-time{
+  font-size: 24rpx;
+  color: #B0AFAE;
+ margin-top: 16rpx;
+}
+.item-r{
+  text-align: right;
+}
+.item-r-title,.item-r-desc{
+  font-size: 24rpx;
+  color: #383838;
+  margin-top: 16rpx;
+}
+.item-c{
+  width:2rpx;
+  height:74rpx;
+  background:  rgba(220,220,220,1);
+  margin: 20rpx 27rpx 0 35rpx;
+}
+
+.fenxiao-desc{
+  text-align: center;
+  line-height: 200rpx;
+}

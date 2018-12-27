@@ -1,0 +1,49 @@
+
+/* 公告 */
+.w-gonggao-list{
+  /* margin-top: 30rpx; */
+}
+.w-gonggao-item{
+  padding: 40rpx 28rpx;
+  /* border: 1px solid black; */
+  border-bottom: 1rpx solid #E5E5E5;
+} 
+.gonggao-item-imgbox{
+  width: 234rpx;
+  height: 136rpx;
+}
+.gonggao-item-imgbox image{
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+.gonggao-item-title{
+  font-size: 32rpx;
+  line-height: 50rpx;
+  color:#1A1A1A;
+
+  display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+} 
+.gonggao-item-l{
+  margin-right: 60rpx;
+}
+.gonggao-item-b{
+ margin-top: 10rpx;
+}
+.gonggao-item-b view{
+  font-size: 20rpx;
+  color: #616161;
+}
+.gonggao-item-b icon{
+ 
+  height: 40rpx;
+  margin-right: 10rpx;
+  display: inline-block;
+}
+.gonggao-item-b text{
+  vertical-align: middle;
+  display: inline-block;
+}

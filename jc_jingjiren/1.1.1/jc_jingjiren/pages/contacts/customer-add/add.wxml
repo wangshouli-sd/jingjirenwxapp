@@ -1,0 +1,46 @@
+<view class='page'>
+ <form bindsubmit="formSubmit" bindreset="formReset" report-submit="true">
+  <view class='input-item'>
+    <view class='weui-flex info-item'>
+      <view class='item-left'>
+          <i-icon type="man" size="18" color="#7D7D7D"></i-icon>
+      </view>
+      <view class='weui-flex__item item-right'>
+        姓名
+      </view>
+    </view>
+    <view  class='weui-flex__item input-r'>
+      <input class='weui-input' type='text' name='username' placeholder-class='placeholderstyle' placeholder='请输入您的客户真实姓名'></input>
+    </view>
+  </view>
+  <view class='input-item'>
+    <view class='weui-flex info-item'>
+      <view class='item-left'>
+          <i-icon type="dianhua" size="18" color="#7D7D7D"></i-icon>
+      </view>
+      <view class='weui-flex__item item-right'>
+        手机号
+      </view>
+    </view>
+    <view  class='weui-flex__item input-r'>
+      <input class='weui-input' name='userphone' type='text' placeholder-class='placeholderstyle' placeholder='输入11位手机号'></input>
+    </view>
+  </view>
+  <view class='input-item'>
+    <view class='weui-flex info-item'>
+      <view class='item-left'>
+          <i-icon type="beizhu" size="18" color="#7D7D7D"></i-icon>
+      </view>
+      <view class='weui-flex__item item-right'>
+        备注
+      </view>
+    </view>
+    <view  class='weui-flex__item input-r'>
+      <textarea class='weui-textarea' name='remark' placeholder-class='placeholderstyle' placeholder='添加您对客户的备注'></textarea>
+    </view>
+  </view>
+  <view class='w-btn-box'>
+    <button   formType="submit">提交</button>
+  </view>
+     </form>
+</view>

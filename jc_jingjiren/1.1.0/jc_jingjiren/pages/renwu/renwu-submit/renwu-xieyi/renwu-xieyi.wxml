@@ -1,0 +1,21 @@
+<view class=''>
+  <view class='page-body' style='padding:10rpx;'>
+     
+    <block wx:for="{{patharr}}" wx:key="*this">
+      <image catchtap='makepreviewImage' data-url='{{item}}'  mode="widthFix" src='{{item}}' style='width:100%;'></image>
+    </block>
+    
+     <!-- <view class='w-xieyi-title'>
+     
+     </view>
+     <view class='w-xieyi-annotation'>
+     
+     </view>
+     <view class='w-xieyi-title2'>
+     
+     </view>
+     <view class='w-xieyi-content'>
+     
+     </view> -->
+  </view>
+</view>

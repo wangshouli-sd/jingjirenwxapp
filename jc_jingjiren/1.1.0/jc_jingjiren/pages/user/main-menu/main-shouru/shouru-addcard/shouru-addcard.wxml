@@ -1,0 +1,42 @@
+<view class='page-body'>
+  <view class='w-page-desc'>
+      为保证您的资金安全，请绑定账户本人的银行卡
+  </view>
+  <view class='w-input-wrapper'>
+    <view class='w-input-item weui-flex'>
+      <view class='input-l'>
+          姓\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n名
+      </view>
+      <view  class='weui-flex__item input-r'>
+        <input class='weui-input' type='text' placeholder='请输入您的真实姓名'></input>
+      </view>
+    </view>
+    <view class='w-input-item weui-flex'>
+        <view class='input-l'>
+            卡\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n号
+        </view>
+        <view  class='weui-flex__item input-r'>
+          <input class='weui-input' type='number' placeholder='请输入您本人的银行卡号'></input>
+        </view>
+    </view>
+    <view class='w-input-item weui-flex'>
+        <view class='input-l'>
+            手\r\n\r\n机\r\n\r\n号
+        </view>
+        <view  class='weui-flex__item input-r'>
+          <input class='weui-input' type='text' placeholder='请输入您的手机号'></input>
+        </view>
+    </view>
+    <view class='w-input-item weui-flex'>
+        <view class='input-l'>
+            所属银行
+        </view>
+        <view  class='weui-flex__item input-r'>
+          <input class='weui-input' type='text' placeholder='请输入发卡银行名称'></input>
+        </view>
+    </view>
+  </view>
+  <view class='w-btn-box'>
+    <button catchtap='navigatetopage' data-url='../shouru-addcard-detail/shouru-addcard-detail'>下一步</button>
+  </view>
+</view>

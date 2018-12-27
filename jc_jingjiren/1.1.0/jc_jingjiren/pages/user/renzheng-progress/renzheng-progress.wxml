@@ -1,0 +1,32 @@
+<include src="../../template/shadowTop.wxml"/>
+<view class=''>
+  <view class='page-body'>
+      <view class='w-img-box'>
+        <image src='../../../images/pic/shenghe.png'></image>
+      </view> 
+      <view class='w-title'>经纪人审核正在处理中......</view>
+      <view class='w-progress weui-flex'>
+        <view class='w-progress-left'>
+          <view class='progress-l-line' style='height:{{(50+10)+"%"}}'></view>
+        </view>
+        <view class='w-progress-right weui-flex__item'>
+          <view class='progress-r-item weui-flex'>
+            <view class='item-icon item-icon-complate item-complate'><view></view></view>
+            <view class='item-title item-complate'>发起认证</view>
+          </view>  
+          <view class='progress-r-item weui-flex'>
+            <view class='item-icon item-icon-complate'><view></view></view>
+            <view class='item-title weui-flex__item item-complate'>认证处理中</view>
+          </view>
+          <view class='progress-r-item weui-flex'>
+            <view class='item-icon'><view></view></view>
+            <view class='item-title'>认证成功</view>
+          </view>
+        </view>
+      </view>
+
+      <view class='w-btn-wrapper'>
+          <button catchtap='handlebackhome' data-url='../main/main'>返回首页</button>
+      </view>
+  </view>
+</view>

@@ -1,0 +1,33 @@
+
+<view class='w-gonggao-list'>
+  <block  wx:for="{{gglist}}"  wx:key="*this">
+    <view class='w-gonggao-item' catchtap='navigateTopage' data-url='../gonggao-detail/gonggao-detail' data-id='{{item.id}}'>
+      <view class='weui-flex'>
+          <view class='weui-flex__item gonggao-item-l'>
+            <view class='gonggao-item-title'>
+              {{item.title}}
+            </view>
+            <view class='gonggao-item-b weui-flex'>
+              <view class='weui-flex__item tl'>
+                时间：{{item.time}}
+              </view>
+              <view class='weui-flex__item tr' wx:if="{{true}}">
+
+                <icon class='iconfont icon-chakan'></icon>
+                <text>{{item.look}}</text>
+                
+              </view>
+            </view>
+          </view>
+          <view class='gonggao-item-r'>
+            <view class='gonggao-item-imgbox'>
+              <image src='{{item.imgurl}}'></image>
+            </view>        
+          </view>
+      </view>
+    </view>
+   </block>
+</view>
+<view wx:if="{{nomoredata}}">
+  <include src="../../template/noMoreData.wxml"/>
+</view>  

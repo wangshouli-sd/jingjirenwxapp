@@ -1,0 +1,51 @@
+<view class='page-head' style='background-image:url("");'>
+  <image class='page-head-backimg' src='../../../../../images/pic/back_tixian.png'></image>
+    <view class='head-wrapper'>
+        <view class='head-wrapper-top'>
+          <view class='head-wrapper-title'>账户余额  (元)</view>
+          <view class='head-wrapper-number'>{{money_yu}}</view>
+        </view>
+        <view class='head-wrapper-bottom'>
+          <view class='head-wrapper-title'>累计{{yongjin}}  (元)</view>
+          <view class='head-wrapper-number'>{{money_all}}</view>
+        </view>
+    </view>
+</view> 
+<view class='page-body'>
+  <view class='body-info-item weui-flex'>
+      <view class='weui-flex__item'>
+          <view class='body-info-item-title'>我的邀请码</view>
+          <view class='body-info-item-info'>{{unicode}}</view>
+      </view>
+      <view class='weui-flex__item'>
+          <view class='body-info-item-title'>推荐人</view>
+          <view class='body-info-item-info' wx:if='{{parent == null}}'>无</view>
+          <view class='body-info-item-info' wx:else>{{parent}}</view>
+      </view>
+  </view>
+  <view class='body-info-item weui-flex'>
+      <view class='weui-flex__item'>
+          <view class='body-info-item-title'>待确认 (元)</view>
+          <view class='body-info-item-info' wx:if='{{money_daiqueren == null}}'>暂无待确认</view>
+          <view class='body-info-item-info' wx:else>{{money_daiqueren}}</view>
+      </view>
+      <view class='weui-flex__item'>
+          <view class='body-info-item-title'>提现中 (元)</view>
+          <view class='body-info-item-info' wx:if='{{money_tixianzhong == null}}'>暂无提现中</view>
+          <view class='body-info-item-info' wx:else>{{money_tixianzhong}}</view>
+      </view>
+  </view>
+  <view class='body-info-item weui-flex'>
+      <view class='weui-flex__item'>
+          <view class='body-info-item-title'>分销{{yongjin}} (元)</view>
+          <view class='body-info-item-info'>{{money_fenxiao}}</view>
+      </view>
+      <view class='weui-flex__item'>
+          <view class='body-info-item-title'>直返{{yongjin}} (元)</view>
+          <view class='body-info-item-info'>{{money_zhifan}}</view>
+      </view>
+  </view>
+</view>
+<view class='foot-btn'>
+  <button catchtap='navigatetopage' data-url='../shouru-tixian/shouru-tixian'>我要提现</button>
+</view>

@@ -1,0 +1,79 @@
+.page-head{
+  height: 360rpx;
+  /* border:1px solid black; */
+  padding: 29rpx 38rpx 26rpx 38rpx;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+.page-head-backimg{
+  position: absolute;
+  left: 0rpx;
+  right: 0rpx;
+  top: 0rpx;
+  bottom: 0rpx;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.head-wrapper{
+  border: 1rpx solid #EEEEEE;
+  height: 100%;
+  padding-top: 20rpx;
+}
+.head-wrapper-title{
+  
+}
+.head-wrapper-top,.head-wrapper-bottom{
+  color: #FFFFFF;
+  font-size: 30rpx;
+  text-align: center;
+}
+.head-wrapper-top view,.head-wrapper-bottom view{
+  margin-top: 20rpx;
+}
+.head-wrapper-bottom{
+  width: 390rpx;
+  border-top: 1rpx solid #E5E5E5;
+  margin: auto;
+  margin-top: 20rpx;
+}
+
+/* body
+ */
+
+.body-info-item{
+  min-height: 100rpx;
+  padding: 70rpx 0 40rpx 0;
+  border-bottom: 1rpx solid #dfdfdf;
+}
+.body-info-item .weui-flex__item{
+  /* border: 1px solid black; */
+  padding-left: 68rpx;
+}
+.body-info-item-title{
+  font-size: 30rpx;
+  color: #000000;
+}
+.body-info-item-info{
+  font-size: 30rpx;
+  color: #FF6600;
+  margin-top: 24rpx;
+}
+
+
+/* foot*/
+.foot-btn{
+  margin: 88rpx auto 84rpx auto;
+}
+.foot-btn button{
+  width:264rpx;
+  height:59rpx;
+  border:0.81rpx solid rgba(181,181,181,1);
+  border-radius:26rpx;
+  font-size: 30rpx;
+  color: #A2A3A3;
+  line-height: 60rpx;
+  background: white;
+}

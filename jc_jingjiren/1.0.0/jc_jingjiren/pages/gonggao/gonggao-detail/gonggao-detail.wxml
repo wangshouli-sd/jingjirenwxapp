@@ -1,0 +1,8 @@
+<view class='box-shadow-b'></view>
+<view class='page'>
+  <view class='w-article-title'>{{detail.title}}</view>
+  <view class='w-article-time'>时间：{{detail.time}}</view>
+  <view class='w-article-content'>
+      {{detail.content}}
+  </view>
+</view>

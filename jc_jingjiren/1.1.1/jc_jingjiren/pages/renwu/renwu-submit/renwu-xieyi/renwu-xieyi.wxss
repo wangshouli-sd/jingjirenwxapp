@@ -1,0 +1,4 @@
+/* pages/renwu/renwu-submit/renwu-xieyi/renwu-xieyi.wxss */
+.page-body{
+  border-top: 1px solid#E5E5E5;
+}

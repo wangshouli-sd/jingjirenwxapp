@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "已签约待服务",
+  "usingComponents": {
+    "i-icon": "../../../../we7/dist/icon/index"
+  }
+}

@@ -1,0 +1,197 @@
+<view class='page'>
+  <view class='page-header page__bd'>
+    <view class="weui-tab">
+        <view class="weui-navbar">
+            <block wx:for="{{tabs}}" wx:key="*this">
+                <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                    <view class="weui-navbar__title">{{item}}</view>
+                </view>
+                <view wx:if='{{index<tabs.length-1}}' class='border-s'></view>
+            </block>
+            <!-- <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view> -->
+        </view>
+    </view>
+    <!-- <view style='width:100%;border:1px solid red;'>
+      <scroll-view scroll-x style="width: 200%;border:1px solid black;">
+        <view class="weui-tab">
+          <view class="weui-navbar">
+              <block wx:for="{{tabs}}" wx:key="*this">
+                  <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                      <view class="weui-navbar__title">{{item}}</view>
+                  </view>
+                  <view wx:if='{{index<tabs.length-1}}' class='border-s'></view>
+              </block>
+          </view>
+        </view>
+      </scroll-view>
+    </view> -->
+    
+    <view class='weui-tab-desc weui-flex'>
+      <view class='weui-tab-desc-left weui-flex__item'>
+        <view class='weui-tab-desc-title'>
+          {{tabs[activeIndex]}}
+        </view>
+        <view class='weui-tab-desc-intr'>
+            当前{{activeIndex==0?state4total:activeIndex==1?state1total:activeIndex==2?state2total:activeIndex==3?state3total:state0total}}个业务{{tabs[activeIndex]}}
+        </view>
+      </view>
+      <view class='weui-tab-desc-right weui-flex__item'>
+        <image src='../../../images/pic/benz.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='page-body'>
+      <view class="weui-tab__panel">
+          <!-- 审核中 -->
+          <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+            <block wx:for="{{list_state4}}"  wx:key="*this">
+              <view class='w-state2-item weui-flex' catchtap='' data-id='{{item.id}}' data-url='../detail-qianyue/detail-qianyue'>
+                <view class='state2-item-left'>
+                    <image src='{{item.imgurl}}'></image>
+                </view>
+                <view class='state2-item-right weui-flex__item'>
+                    <view class='state2-title weui-flex'>
+                      <view class='weui-flex__item'>{{item.projectname}}</view>
+                      <text>{{item.time}}</text>
+                    </view>
+                    <view class='state2-info'>
+                    <view class='state2-info-item'><view>副标题{{item.subname}}</view></view>
+                      <view class='state2-info-item'><view>业务人员：{{item.username}}</view></view>
+                      <view class='state2-info-item'><view>联系方式：{{item.userphone}}</view></view>
+                      <view class='state2-info-item'><view>项目类型：{{item.category}}</view></view>
+                      <!-- <view class='state2-info-item'><view>项目佣金：<text>￥{{item.price}}</text></view></view> -->
+                    </view>
+                </view>
+              </view>
+            </block>
+            <view wx:if="{{state4_stopRefresh}}" class="weui-loadmore weui-loadmore_line" style='margin-top:129rpx;'>
+              <view class="weui-loadmore__tips weui-loadmore__tips_in-line">我是有底线的</view>
+            </view>
+          </view>
+          <!-- 洽谈中列表 -->
+          <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+            <block wx:for="{{list_state1}}" wx:key="*this">
+              <view class='w-state1-item'>
+                <view class='w-state1-item-head weui-flex'>
+                  <view class='weui-flex__item state1-item-title'>
+                      {{item.projectname}}介绍订单
+                      <view class='state1-item-title-line'></view>
+                  </view>
+                  <view class='state1-item-time'>
+                      {{item.tasktime}}
+                  </view>
+                </view>
+                <view class='w-state1-item-body'>
+                  <view class='state1-progress'>
+                    <view class='state1-progress-bottom weui-flex'>
+                      <block wx:for="{{item.allprocess}}" wx:for-item="step"  wx:for-index="stepindex" wx:key="{{stepindex}}" wx:if="{{stepindex<5}}">
+                        <view class='weui-flex__item progress-step-item {{step.state==3?"state1-step-complete":""}}'>
+                          <view class='progress-bottom-icon'><view></view></view>
+                          <view class='progress-bottom-title'>{{step.process_name}}</view> 
+                          <view class='progress-step-line progress-step-line-l'></view>
+                          <view class='progress-step-line progress-step-line-r'></view>
+                        </view>
+                      </block>
+                      <view class='weui-flex__item progress-step-item progress-bottom-more'>
+                        <view class='progress-bottom-icon-more'>...</view>
+                        <!-- <view class='progress-bottom-title'>更多</view> -->
+                        <view class='progress-step-line progress-step-line-l'></view>
+                        <view class='progress-step-line progress-step-line-r'></view>
+                      </view> 
+                        
+                    </view>
+                  </view>
+                </view>
+                <view class='w-state1-item-foot tr'>
+                    <button catchtap='navigatetopage' data-url='../detail-qiatan/detail-qiatan' data-id='{{item.id}}'>查看</button>
+                </view>
+              </view> 
+            </block> 
+            <view wx:if="{{state1_stopRefresh}}" class="weui-loadmore weui-loadmore_line" style='margin-top:129rpx;'>
+              <view class="weui-loadmore__tips weui-loadmore__tips_in-line">我是有底线的</view>
+            </view>
+          </view>
+          <!-- 服务中列表 -->
+          <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+            <block wx:for="{{list_state2}}"  wx:key="*this">
+              <view class='w-state2-item weui-flex' catchtap='navigatetopage' data-id='{{item.id}}' data-url='../detail-qianyue/detail-qianyue'>
+                <view class='state2-item-left'>
+                    <image src='{{item.imgurl}}'></image>
+                </view>
+                <view class='state2-item-right weui-flex__item'>
+                    <view class='state2-title weui-flex'>
+                      <view class='weui-flex__item'>{{item.projectname}}</view>
+                      <text>{{item.tasktime}}</text>
+                    </view>
+                    <view class='state2-info'>
+                      <view class='state2-info-item'><view>业务人员：{{item.username}}</view></view>
+                      <view class='state2-info-item'><view>联系方式：{{item.userphone}}</view></view>
+                      <view class='state2-info-item'><view>项目类型：{{item.category}}</view></view>
+                      <view class='state2-info-item'><view>项目佣金：<text>￥{{item.price}}</text></view></view>
+                    </view>
+                </view>
+              </view>
+            </block>
+            <view wx:if="{{state2_stopRefresh}}" class="weui-loadmore weui-loadmore_line" style='margin-top:129rpx;'>
+              <view class="weui-loadmore__tips weui-loadmore__tips_in-line">我是有底线的</view>
+            </view>
+          </view>
+          <!-- 已完成列表 -->
+          <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+            <view class='w-state3-wrapper'>
+              <block wx:for="{{list_state3}}"  wx:key="*this">
+                <view class='w-state3-item'>
+                  <view class='state3-item-header weui-flex'>
+                    <view class='weui-flex__item'>已完成</view>
+                    <view class='weui-flex__item'>
+                      <button catchtap='navigatetopage' data-id='{{item.id}}'  data-url='../detail-qiatan/detail-qiatan'>查看</button>
+                    </view>
+                  </view>
+                  <view class='state3-item-body weui-flex'>
+                    <view class='state3-item-body-left'>
+                      <image src='{{item.imgurl}}'></image>
+                    </view>
+                    <view class='state3-item-body-rigth weui-flex__item'>
+                      <view class='state3-title'>{{item.projectname}}</view>
+                      <view class='state3-time'>完成时间：{{item.tasktime}}</view>
+                      <view class='state3-commission'>获得佣金：<text>￥{{item.price}}</text></view>
+                    </view>
+                  </view>
+                </view>
+              </block>
+            </view>
+            <view wx:if="{{state3_stopRefresh}}" class="weui-loadmore weui-loadmore_line" style='margin-top:50rpx;'>
+              <view class="weui-loadmore__tips weui-loadmore__tips_in-line">我是有底线的</view>
+            </view>
+          </view>
+
+           <!-- 未通过列表 -->
+          <view class="weui-tab__content" hidden="{{activeIndex != 4}}">
+              <block wx:for="{{list_state0}}"  wx:key="*this">
+                <view class='w-state0-item weui-flex'>
+                    <view class='state0-item-left'>
+                        <image src='{{item.imgurl}}'></image>
+                    </view>
+                    <view class='state0-item-right weui-flex__item'>
+                        <view class='state0-title weui-flex'>
+                          <view class='weui-flex__item'>{{item.projectname}}</view>
+                          <button class='statebtn' wx:if="{{item.state_check == '0'}}" catchtap='navigatetopage' data-url='../../renwu/renwu-nopass/renwu-nopass' data-case='{{item.state_why}}' data-id='{{item.id}}'>审核未通过</button>
+                          <button class='statebtn' wx:elif="{{item.state_check != '0' && item.state_progress == '1'}}"  catchtap='navigatetopage' data-url='../detail-qiatan/detail-qiatan' data-id='{{item.id}}'>洽谈失败</button>
+                          <button class='statebtn' wx:elif="{{item.state_check != '0' && item.state_progress == '2'}}" catchtap='navigatetopage' data-id='{{item.id}}' data-url='../detail-qianyue/detail-qianyue'>服务终止</button>
+                        </view>
+                        <view class='state0-master weui-flex'>
+                          <view class=''>业务人员：{{item.username}}</view>
+                          <view class=''>联系方式：{{item.userphone}}</view>
+                          
+                        </view>
+                        <view style='font-size:18rpx;color:gray;text-align:right;padding-right:60rpx;'>{{item.time}}</view>
+                    </view>
+                </view>
+              </block>
+              <view wx:if="{{state0_stopRefresh}}" class="weui-loadmore weui-loadmore_line" style='margin-top:129rpx;'>
+                  <view class="weui-loadmore__tips weui-loadmore__tips_in-line">我是有底线的</view>
+              </view>
+          </view>
+      </view>
+  </view>
+</view>

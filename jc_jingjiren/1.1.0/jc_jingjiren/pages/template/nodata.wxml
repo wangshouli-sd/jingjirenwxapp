@@ -1,0 +1,10 @@
+<view>
+  <view class='w-nodata'>
+    <view class='w-nodata-imgBox'>
+      <image src='http://192.168.0.201:88/images/nodata.png'></image>
+    </view>
+    <view class='w-nodata-title'>
+      暂无数据
+    </view>
+  </view>
+</view>

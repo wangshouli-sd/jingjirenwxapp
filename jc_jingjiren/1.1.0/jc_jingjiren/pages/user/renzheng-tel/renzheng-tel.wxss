@@ -1,0 +1,72 @@
+.page{
+  border-top: 1px solid rgba(0, 0, 0, 0);
+  padding-bottom: 30rpx;
+}
+.w-wrapper{
+  margin-left: 88rpx;
+  margin-top: 52rpx;
+}
+.w-imgbox{
+  width: 224rpx;
+  height: 94rpx;
+}
+.w-imgbox image{
+  width: 100%;
+  height: 100%;
+}
+.w-title{
+  font-size: 48rpx;
+  color: #101010;
+  margin-top: 82rpx;
+}
+.w-desc{
+  font-size: 26rpx;
+  margin-top: 27rpx;
+  color:#999A9A;
+}
+
+.w-item-cell{ 
+  margin-top: 60rpx;
+  font-size: 30rpx;
+  color: #767676;
+}
+.border{
+  border-bottom: 1px solid #EEEEEE;
+  padding-bottom: 20rpx;
+}
+.cell-text{
+  line-height: 50rpx;
+}
+.w-item-cell  input{
+  margin-left: 20rpx;
+  line-height: 40rpx;
+  padding-left: 30rpx;
+}
+.w-item-cell button{
+  width:180rpx;
+  height:54rpx;
+  background:white;
+  border-radius:27rpx;
+  color: #767676;
+  font-size: 24rpx;
+  float: right;
+  line-height: 56rpx;
+  border: 1px solid #D2D2D2;
+}
+.w-submit{
+  margin-top: 175rpx;
+  text-align: left;
+}
+.w-submit button{
+  width:139rpx;
+  height:50rpx;
+  /* background:rgba(160,160,160,1); */
+  background: white;
+  border-radius:25rpx;
+  color: #A0A0A0;
+  border: 1px solid #D2D2D2;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 50rpx;
+  float: left;
+}

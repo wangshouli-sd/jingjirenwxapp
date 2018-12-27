@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "客户通讯录",
+  "disableScroll": true,
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "i-icon": "../../../we7/dist/icon/index",
+    "i-panel": "../../../we7/dist/panel/index"
+  }
+}

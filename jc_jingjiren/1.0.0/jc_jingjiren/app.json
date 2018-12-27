@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/renwu/renwu-index/renwu-index",
+    "pages/user/renzheng-tel/renzheng-tel",
+    "pages/user/renzheng-idc/renzheng-idc",
+    "pages/user/main/main",
+    "pages/user/main-editor/main-editor",
+    "pages/user/main-menu/main-collection/main-collection",
+    "pages/user/main-menu/main-shouru/main-shouru",
+    "pages/renwu/renwu-detail/renwu-detail",
+    "pages/renwu/renwu-submit/renwu-submit",
+    "pages/renwu/renwu-submit/renwu-xieyi/renwu-xieyi",
+    "pages/renwu/renwu-nopass/renwu-nopass",
+    "pages/user/main-menu/main-opinion/main-opinion",
+    "pages/xiangmu/guanli/guanli",
+    "pages/user/renzheng-start/renzheng-start",
+    "pages/renwu/renwu-fenlei/renwu-fenlei",
+    "pages/user/renzheng-progress/renzheng-progress",
+    "pages/user/main-menu/main-shouru/shouru-ketixian/shouru-ketixian",
+    "pages/user/main-menu/main-shouru/shouru-tixian/shouru-tixian",
+    "pages/xiangmu/detail-qianyue/detail-qianyue",
+    "pages/xiangmu/detail-qiatan/detail-qiatan",
+    "pages/user/main-menu/main-shouru/shouru-jindu/shouru-jindu",
+    "pages/user/main-menu/main-shouru/shouru-yongjinmingxi/shouru-yongjinmingxi",
+    "pages/xiangmu/detail-nodata/detail-nodata",
+    "pages/gonggao/gonggao-list/gonggao-list",
+    "pages/gonggao/gonggao-detail/gonggao-detail",
+    "pages/user/main-menu/main-team/main-team",
+    "pages/user/main-menu/main-shouru/shouru-addcard/shouru-addcard",
+    "pages/user/main-menu/main-shouru/shouru-addcard-detail/shouru-addcard-detail",
+    "pages/user/main-menu/main-posters/main-posters",
+    "pages/user/main-menu/main-posters2/main-posters2",
+    "pages/user/main-menu/main-posters3/main-posters3",
+    "pages/user/main-menu/main-posters4/main-posters4",
+    "pages/user/main-menu/main-shouru/shouru-tixianmingxi/shouru-tixianmingxi"
+  ],
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#55D0C4",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/renwu/renwu-index/renwu-index",
+        "text": "首页",
+        "iconPath": "images/tabbar/icon-default/icon/home.png",
+        "selectedIconPath": "images/tabbar/icon-default/icon/home_in.png"
+      },
+      {
+        "pagePath": "pages/xiangmu/guanli/guanli",
+        "text": "项目",
+        "iconPath": "images/tabbar/icon-default/icon/ziyuan.png",
+        "selectedIconPath": "images/tabbar/icon-default/icon/ziyuan_in.png"
+      },
+      {
+        "pagePath": "pages/user/main/main",
+        "text": "我的",
+        "iconPath": "images/tabbar/icon-default/icon/user.png",
+        "selectedIconPath": "images/tabbar/icon-default/icon/user_in.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "经纪人",
+    "navigationBarTextStyle": "black"
+  }
+}

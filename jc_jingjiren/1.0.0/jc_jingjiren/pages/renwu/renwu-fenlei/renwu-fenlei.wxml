@@ -1,0 +1,61 @@
+<view class='page'>
+  <view class='page-head'>
+    <view class='w-search' style='background-image:url(../../../images/pic/search.png)'>
+      <input type='text' confirm-type='search' class='' placeholder='搜一搜' bindconfirm='makesearchinfo'></input>
+    </view>
+    <view class='w-classification'>
+      <view wx:for="{{catagory}}" wx:key="*this" class='w-classification-item {{index%3 == 0?"tl":index%3 == 1?"tc":"tr"}}' >
+        <view class='w-classification-item-box {{classifiactive == index?"classifiactive":""}}' data-index='{{index}}' data-value="{{item.title}}" data-id='{{item.id}}' catchtap='makeSearchClass'>
+          <view>{{item.title}}</view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+  <view class='w-interval'></view>
+  <view class='page-body'>
+      <view class="weui-tab">
+        <view class="weui-navbar">
+            <block wx:for="{{tabs}}" wx:key="*this">
+                <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                    <view class="weui-navbar__title">{{item}}</view>
+                </view>
+            </block>
+            <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+        </view>
+        <!-- <view class="weui-tab__panel">
+            <view class="weui-tab__content" hidden="{{activeIndex != 0}}">1 </view>
+            <view class="weui-tab__content" hidden="{{activeIndex != 1}}"> 2</view>
+        </view> -->
+      </view>
+      <view class='w-content-wrapper'>
+    
+          <block  wx:for="{{renwuList}}"  wx:key="*this">
+            <view class='list-item weui-flex' wx:key="*this" catchtap='navigateToDetail' data-url='../renwu-detail/renwu-detail' data-id='{{item.id}}'>
+                <view class='item-left'>
+                  <view class="placeholder">
+                      <image src='{{item.img_path}}'></image>
+                      <view>预计可得佣金<text>{{item.min_price}}~{{item.max_price}}</text>元</view>
+                  </view>
+                </view>
+                <view class="weui-flex__item item-right">
+                  <view class="placeholder">
+                    <view class='item-title'>{{item.name}}</view>
+                    <view class='item-desc'>{{item.description}}</view>
+                    <view class='item-info'>
+                        <view>佣金比例:{{item.vt_price_percent}}%</view>
+                        <view>已发放:{{item.vt_price_already}}元</view>
+                        <view>已成交:{{item.vt_price_total}}单</view>
+                        <view>申请人数:{{item.vt_project_count}}人</view>
+                    </view>
+                  </view>
+                </view> 
+            </view>
+          </block>
+      </view>
+      <view wx:if="{{nomoredata}}">
+        <include src="../../template/noMoreData.wxml"/>
+      </view> 
+  </view>
+
+</view>

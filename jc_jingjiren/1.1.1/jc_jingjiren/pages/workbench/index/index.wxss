@@ -1,0 +1,113 @@
+/* pages/workbench/index/index.wxss */
+.page{
+  padding: 0px 20rpx;
+  background: rgba(255, 255, 255, 1);
+  padding-bottom: 20rpx;
+}
+.wraper-top{
+  margin-top: 20rpx;
+  height: 208rpx;
+  width: 710rpx;
+  border-radius:10rpx; 
+  box-shadow:0px 3px 4px 0px rgba(0, 0, 0, 0.19);
+  overflow: hidden;
+}
+.wraper-top image{
+  width: 100%;
+  height: 100%;
+  border-radius:10rpx; 
+}
+.wrapper-header{
+  margin-top: 20rpx;
+  width:700rpx;
+  background:rgba(255,255,255,1);
+  box-shadow:3px 3px 12px 1px rgba(4,0,0,0.21);
+  border-radius:10px;
+  padding-bottom: 20rpx;
+}
+.tabbar-list-item{
+  text-align: center;
+  /* border: 1px solid black;
+  background: white; */
+}
+.w-tab-item{
+  text-align: center;
+}
+.tab-item-icon{
+  width: 76rpx;
+  height: 76rpx;
+  margin: auto;
+  margin-top: 30rpx;
+  border-radius:10rpx; 
+  display: flex;  
+  align-items: center;  
+  justify-content: center;
+}
+.tab-item-title{
+
+  font-size:24rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(69,69,69,1);
+  margin-top: 16rpx;
+}
+
+/*  */
+.wrapper-title{
+  font-size:30rpx;
+  font-family:PingFang-SC-Bold;
+  font-weight:bold;
+  color:rgba(69,69,69,1);
+  /* line-height:72rpx; */
+  /* border: 1px solid black; */
+
+  padding:12px 15px;
+  background:#fff;
+  align-items:center;
+  margin-top: 20rpx;
+}
+/* 业务菜单 */
+.menu-row{
+
+}
+.menu-list-item{
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    /* background: rgba(0, 153, 229, .7); */
+    /* border: 1px solid black; */
+
+}
+.menu-list-item-iconbox{
+  width:76rpx;
+  height:76rpx;
+  border-radius:10rpx; 
+  display: flex;  
+  align-items: center;  
+  justify-content: center;
+  margin: auto;
+}
+.menu-list-item-title{
+  font-size:24rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(69,69,69,1);
+  margin-top: 16rpx;
+}
+.bgt1{background: #D35176}
+.bgt2{background: #5BB08F}
+.bgt3{background: #D05B56}
+.bg1{background: #4F6EF8}
+.bg2{background: #66BFB5}
+.bg3{background: #D67C93}
+.bg4{background: #1B84EE}
+.bg5{background: #00D772}
+.bg6{background: #8169F3}
+.bg7{background: #D05B56}
+.bg8{background: #65A7E5}
+.bgc1{background: #66BFB5}
+.bgc2{background: #6295C9}
+.bgc3{background: #5BB08F}
+.bgc4{background: #65A7E5}
+.bgc5{background: #D67C93}
+

@@ -1,0 +1,39 @@
+page{
+   background:rgba(248,248,248,1);
+}
+.w-page-desc{
+  font-size: 28rpx;
+  color:#6D6D6D;
+  padding: 35rpx 20rpx;
+  background:rgba(248,248,248,1);
+}
+.w-input-wrapper{
+  
+}
+.w-input-item{
+  background: white;
+  padding: 0 20rpx;margin-top: 20rpx;
+  height: 80rpx;
+  /* border-bottom: 1rpx solid #E5E5E5; */
+}
+.w-input-item view{
+  line-height: 70rpx;
+}
+.input-l{
+  padding: 0rpx 50rpx;
+}
+.input-r input{
+  padding: 0 10rpx;
+}
+.w-btn-box{
+  padding: 25rpx;
+}
+.w-btn-box button{
+  width:100%;
+  height:83rpx;
+  background:rgba(82,161,253,1);
+  border-radius:37px;
+  color: white;
+  line-height: 80rpx;
+  margin-top: 140rpx;
+}
