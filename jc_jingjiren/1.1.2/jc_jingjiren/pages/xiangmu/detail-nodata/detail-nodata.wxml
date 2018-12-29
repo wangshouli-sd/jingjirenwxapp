@@ -1,0 +1,13 @@
+<view>
+  <view class='w-nodata'>
+    <view class='w-nodata-imgBox'>
+      <image src='../../../images/pic/nodata.png'></image>
+    </view>
+    <view class='w-nodata-title'>
+      暂无数据
+    </view>
+     <view class='w-nodata-btn'>
+      <button catchtap='navigatetopage' data-url='../guanli/guanli'>返回首页</button>
+    </view>
+  </view>
+</view>

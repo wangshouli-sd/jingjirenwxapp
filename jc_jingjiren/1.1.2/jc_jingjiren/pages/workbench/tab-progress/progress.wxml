@@ -1,0 +1,126 @@
+<view class='page'>
+  <view class='wrapper'>
+    <view class='wrapper-search weui-flex'>
+      <view class="weui-search-bar__box weui-flex__item">
+        <i-icon type="sousuo" size="16" color="#B5B4B4" class='w-icon-search_in-box'></i-icon>
+        <input type="text" class="weui-search-bar__input" confirm-type='search' placeholder="搜索" value="" bindconfirm='makesearchinfo' bindinput="inputTyping" focus="{{inputShowed}}" />
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+          <i-icon type="sousuo" size="20" color="#B5B4B4" style='margin-right:10rpx;'></i-icon>
+          <view class="weui-search-bar__text">关键词搜索</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
+    <view class='wrapper-body'>
+      <!-- 列表 -->
+      <view class="weui-tab__content">
+        <block wx:for="{{list}}" wx:key="*this">
+          <view class='w-state1-item'>
+            <view class='w-state1-item-head weui-flex'>
+              <view class='weui-flex__item state1-item-title'>
+                {{item.category}}
+                <view class='weui-flex__item state1-item-state' wx:if="{{item.state_check=='1'}}">
+                  <i-tag class="i-tags"  name="单个标签" color="blue"> 审核中 </i-tag>
+                </view>
+                <view class='weui-flex__item state1-item-state' style='color:red' wx:elif="{{item.state_check=='0'}}">                    <i-tag class="i-tags"  name="单个标签" color="red"> 审核不通过 </i-tag>
+                </view>
+                <view class='weui-flex__item state1-item-state' style='color:red' wx:elif="{{item.state_progress=='1' && item.is_stop=='1'}}"> <i-tag class="i-tags"  name="单个标签" color="yellow"> 洽谈失败 </i-tag>
+                
+                </view>
+                <view class='weui-flex__item state1-item-state' style='color:green' wx:elif="{{item.state_progress=='1' && item.is_stop=='0'}}">
+                   <i-tag class="i-tags"  name="单个标签" color="blue"> 洽谈中 </i-tag>
+                </view>
+                <view class='weui-flex__item state1-item-state' style='color:green' wx:elif="{{item.state_progress=='2' && item.is_stop=='0'}}">
+                 <i-tag class="i-tags"  name="单个标签" color="green"> 服务中 </i-tag>
+                </view>
+                <view class='weui-flex__item state1-item-state' style='color:red' wx:elif="{{item.state_progress=='2' && item.is_stop=='1'}}">
+                  <i-tag class="i-tags"  name="单个标签" color="red"> 服务中止 </i-tag>
+                </view>
+                <view class='weui-flex__item state1-item-state' style='color:green' wx:elif="{{item.state_progress=='4' }}">      
+                  <i-tag class="i-tags"  name="单个标签" color="blue"> 代传合同 </i-tag>
+                </view>
+                <view class='weui-flex__item state1-item-state' style='color:blue' wx:elif="{{item.state_progress=='3' }}">
+                <i-tag class="i-tags"  name="单个标签" color="green"> 已完成 </i-tag>
+                </view>
+                <view class='state1-item-title-line'></view>
+              </view>
+              <view class='state1-item-time'>
+                {{item.tasktime}}
+              </view>
+            </view>
+            <view class='w-state1-item-subhead weui-flex'>
+              <view class='weui-flex__item item-subhead-title'>{{item.projectname}}介绍订单</view>
+              
+              <view class='' wx:if="{{item.state_progress=='1' ||item.state_progress=='3' ||item.state_progress=='4'}}">
+                <button catchtap='navigatetopage' data-url='../../xiangmu/detail-qiatan/detail-qiatan' data-id='{{item.id}}'>查看</button>
+              </view>
+              <view class='' wx:elif="{{item.state_check=='0'}}">
+                <button catchtap='navigatetopage' data-url='../../renwu/renwu-nopass/renwu-nopass' data-state='{{item.state_why}}'>查看</button>
+              </view>
+              <view class='' wx:elif="{{item.state_progress=='2'}}">
+                <button catchtap='navigatetopage' data-url='../../xiangmu/detail-qianyue/detail-qianyue' data-id='{{item.id}}'>查看</button>
+              </view>
+            </view>
+            <view class='w-state1-item-body'>
+              <!-- <view class='state1-progress'> -->
+              <view wx:if="{{item.state_check!='0' && item.state_check!='1'}}">
+                <view class='state1-progress-bottom weui-flex'>
+
+                  <block wx:for="{{item.allprocess}}" wx:for-item="step" wx:for-index="stepindex" wx:key="{{stepindex}}" wx:if="{{stepindex<5}}">
+                    <view class='weui-flex__item progress-step-item {{step.state==3?"state1-step-complete":""}}'>
+                      <view class='progress-bottom-icon'>
+                        <view></view>
+                      </view>
+                      <view class='progress-bottom-title'>{{step.process_name}}</view>
+                      <view class='progress-step-line progress-step-line-l'></view>
+                      <view class='progress-step-line progress-step-line-r'></view>
+                    </view>
+                  </block>
+                  <view class='weui-flex__item progress-step-item progress-bottom-more'>
+                    <view class='progress-bottom-icon-more'>...</view>
+                    <view class='progress-step-line progress-step-line-l'></view>
+                    <view class='progress-step-line progress-step-line-r'></view>
+                  </view>
+                </view>
+              </view>
+              <view wx:if="{{item.state_check=='0'}}" class='remarks'>
+                理由：{{item.state_why}}
+              </view>
+              <view wx:if="{{item.state_check=='1'}}" class='info-detail'>
+                <view class='weui-flex'>
+                  <view class='left'>
+                    业务人：
+                  </view>
+                  <view class='weui-flex__item right'>
+                    {{item.username}}
+                  </view>
+                </view>
+                <view class='weui-flex'>
+                  <view class='left'>
+                    联系方式：
+                  </view>
+                  <view class='weui-flex__item right'>
+                    {{item.userphone}}
+                  </view>
+                </view>
+                <view class='weui-flex'>
+                  <view class='left'>
+                    备注：
+                  </view>
+                  <view class='weui-flex__item right'>
+                    {{item.describe}}
+                  </view>
+                </view>
+              </view>
+            </view>
+            <!-- </view> -->
+          </view>
+        </block>
+      </view>
+      <!-- 列表 -->
+      <view>
+        <include src="../../template/noMoreData.wxml" />
+      </view>
+    </view>
+  </view>
+</view>

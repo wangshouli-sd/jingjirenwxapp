@@ -1,0 +1,72 @@
+<view class=''>
+  <view class='page-head'>
+    <view class='head-card weui-flex'>
+      <view class='head-card-l'>
+        <image src='{{detail.imgurl}}'></image>
+      </view>
+      <view class='weui-flex__item head-card-r'>
+        <view class='card-r-item'>项目名称：{{detail.projectname}}</view>
+        <view class='card-r-item'>业务编号：{{detail.task_number}}</view>
+        <view class='card-r-item'>业务联系人：{{detail.username}}</view>
+        <view class='card-r-item'>联系方式：{{detail.userphone}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='page-body'>
+    <view class='w-body-title'>
+      <text wx:if="{{detail.state_progress == '3'}}">业务已完成(获得佣金：￥{{detail.price}})</text>
+      <text wx:elif="{{detail.state_progress == '4'}}">业务洽谈成功,待上传合同</text>
+      <text wx:elif="{{detail.state_progress == '1' && detail.is_stop != '1'}}">业务洽谈中</text>
+      <text wx:elif="{{detail.state_progress == '1' && detail.is_stop == '1'}}">业务洽谈失败</text>
+      <text wx:elif="{{detail.state_progress == '2' && detail.is_stop != '1'}}">业务服务中</text>
+      <text wx:elif="{{detail.state_progress == '2' && detail.is_stop == '1'}}">业务服务中止</text>
+      <!-- <text wx:else>业务洽谈失败</text>  -->
+      <view class='w-body-title-line'></view>
+    </view>
+    <view class='w-body-content'>
+      <view wx:if="{{detail.state_progress == '4'}}" style='text-align:center;margin-top:90rpx;'>
+        <image style='width:300rpx;height:300rpx;' src='../../../images/pic/hetong.png'></image>
+      </view>
+      <view wx:else class='w-progress-wrapper weui-flex'>
+        <!-- <view class='w-progress-left'>
+          <view class='progress-l-line'>
+            <view class='progress-l-line-active' style='height:50%'></view>
+          </view>
+        </view> -->
+        <view class='w-progress-right weui-flex__item'>
+          <block wx:for="{{detail.allprocess}}" wx:key="*this">
+            <view class='progress-right-item weui-flex {{item.state == 3?"item-complete":""}}'>
+              <view class='progress-item-line progress-item-line-t'></view>
+              <view class='progress-item-line progress-item-line-b'></view>
+              <view class='item-icon'>
+                <view class='symbol'>...</view>
+                <!-- <view></view> -->
+              </view>
+              <view class='item-title weui-flex__item'>
+                {{item.process_name}}
+                <view wx:if="{{item.content_type == '2'}}" style="font-size:24rpx;color:#282828;">付款:{{item.price}}%</view>
+              </view>
+              <view class='item-time weui-flex__item'>
+                <text class='statefinish' wx:if="{{item.state == '3'}}">{{item.finish_time}}</text>
+                <text class='stateongoing' wx:elif="{{item.state == '2' && detail.is_stop != '1'}}">进行中</text>
+                <text wx:elif="{{item.state == '2' && detail.is_stop == '1'}}" style='color:red;'>洽谈失败:{{detail.stop_remark}}</text>
+                <text wx:else>未开始</text>
+              </view>
+            </view>
+          </block>
+
+        </view>
+      </view>
+
+      <view class='w-content-kefu'>
+        <view style=' margin: 5rpx auto 5rpx auto;font-size: 30rpx;color: #418CE2;text-align: center;background:none;border:none;' catchtap='makePhoneCall'>
+          对此项目有疑问？ 单击联系客服
+        </view>
+        <button open-type='contact' style=' margin: 5rpx auto 5rpx auto;font-size: 30rpx;color: #418CE2;text-align: center;background:none;border:none; '>
+          <view>单击此处联系在线客服</view>
+        </button>
+      </view>
+
+    </view>
+  </view>
+</view>

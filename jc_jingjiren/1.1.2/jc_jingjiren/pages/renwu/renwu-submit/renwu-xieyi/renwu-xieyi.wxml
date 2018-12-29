@@ -1,0 +1,5 @@
+<view class=''>
+  <view class='page-body' style='padding:10rpx;'>
+      <rich-text nodes="{{patharr}}" bindtap="tap"></rich-text>
+  </view>
+</view>

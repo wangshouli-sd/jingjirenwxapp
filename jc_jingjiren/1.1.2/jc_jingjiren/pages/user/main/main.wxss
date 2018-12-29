@@ -1,0 +1,283 @@
+/* pages/user/main/main.wxss */
+
+.page {
+  padding: 0rpx;
+}
+
+.page-head {
+  /* height: 200rpx; */
+  background: #f1f1f1;
+  /* border: 1px solid black; */
+  padding-bottom: 70rpx;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  display: block;
+  width: 125rpx;
+  height: 125rpx;
+  margin: 48rpx 48rpx 0 64rpx;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.head-center {
+  /* border: 1px solid black; */
+}
+
+.head-left view image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 4rpx 8rpx 20rpx 0rpx #75bad7;
+}
+
+.head-right .iconfont {
+  font-size: 36rpx;
+  font-weight: 300;
+  color: #a9acbb;
+}
+
+.user-name {
+  margin-top: 60rpx;
+  font-size: 36rpx;
+  color: #4e4f4f;
+}
+
+.user-id {
+  font-size: 24rpx;
+  margin-top: 20rpx;
+  color: #a9acbb;
+}
+
+.user-state {
+  font-size: 24rpx;
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+}
+
+.seticon-btn {
+  margin-top: 68rpx;
+  margin-right: 52rpx;
+  background: rgba(0, 0, 0, 0);
+  padding: 10rpx;
+}
+
+.seticon {
+  width: 36rpx;
+  height: 36rpx;
+  /* border: 1px solid #A9ACBB; */
+  color: #a9acbb;
+}
+
+.statetag {
+  color: white;
+  padding: 5rpx 10rpx;
+  font-size: 24rpx;
+  border-radius: 6rpx;
+}
+
+.statetagfalse {
+  background: #e64340;
+}
+
+.statetag0 {
+  background: #e64340;
+}
+
+.statetag1 {
+  background: #9cf;
+}
+
+.statetag2 {
+  background: #3c3;
+}
+
+.statetag3 {
+  background: #f60;
+}
+
+/* body */
+
+.w-body-wallet {
+  padding: 54rpx 0 34rpx 0;
+  /* border-bottom: 2px solid #eeeeee; */
+  width: 710rpx;
+  /* height:159px; */
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 1px 6px 16px 0px rgba(0, 0, 0, 0.18);
+  border-radius: 20rpx;
+  margin: auto;
+  margin-top: -60rpx;
+}
+
+.w-body-wallet .weui-flex__item {
+  text-align: center;
+}
+
+.w-body-wallet .weui-flex__item text {
+  font-size: 30rpx;
+  color: #a9acbb;
+}
+
+.w-body-wallet .weui-flex__item button {
+  display: inline-block;
+}
+
+.body-wallet-item view:nth-child(1) {
+}
+
+.weui-flex__itemaa {
+  /* padding: 54rpx 0 34rpx 0; */
+  width: 580rpx;
+  height: 100rpx;
+  /* height:159px; */
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 1px 6px 16px 0px rgba(0, 0, 0, 0.18);
+  border-radius: 20rpx;
+  margin: auto;
+  position: absolute;
+  z-index: 1;
+  bottom: 400rpx;
+}
+
+.cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.body-wallet-item view:nth-child(2) {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: #1a1a1a;
+}
+
+.body-wallet-item view:nth-child(1) button {
+  color: #a9acbb;
+  font-size: 20rpx;
+  width: 80rpx;
+  height: 36rpx;
+  border-radius: 8rpx;
+  padding: 0rpx;
+  line-height: 36rpx;
+  position: relative;
+  top: 6rpx;
+  left: 8rpx;
+}
+
+.border-s {
+  border: 1px solid #dcdcdc;
+  height: 56rpx;
+  margin-top: 20rpx;
+}
+
+/* body 列表菜单 */
+
+.w-cell-wrapper {
+  margin: 93rpx 0 0 93rpx;
+  padding-bottom: 50rpx;
+}
+
+.w-cell-item {
+  /* border: 1px solid black; */
+  margin-top: 40rpx;
+  line-height: 100%;
+  /* height: 80rpx; */
+}
+
+.w-cell-item .iconfont {
+  width: 50rpx;
+  height: 50rpx;
+  font-size: 40rpx;
+  color: #636984;
+  top: 4rpx;
+}
+
+.cell-title {
+  margin-left: 72rpx;
+  font-size: 30rpx;
+  color: #363636;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+
+.weui-badge {
+  position: relative;
+  top: 10rpx;
+}
+
+.navposterbtn {
+  background: rgba(0, 0, 0, 0);
+  font-size: 30rpx;
+  line-height: 35rpx;
+  color: #363636;
+  margin-top: 14rpx;
+  width: auto;
+  padding: 0rpx;
+  text-align: left;
+  /* line-height:  */
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+
+.weather {
+  height: 110px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  color: #fff;
+  padding: 5PX 15px;
+  display: flex;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.weather>view {
+  flex: 1;
+}
+
+.weather>view>view {
+  margin: 5px 0;
+}
+
+.yesterday {
+  background-color: #30bcaf;
+}
+
+.location, .cond_txt {
+  font-size: 14px;
+}
+
+.date, .tmp {
+  font-weight: bold;
+}
+
+.weather_icon {
+  text-align: center;
+  height: 65px;
+}
+
+.weather_icon image {
+  width: 75px;
+  height: 100%;
+}
+
+.lastUpdateDate {
+  font-size: 10px;
+  text-align: center;
+}

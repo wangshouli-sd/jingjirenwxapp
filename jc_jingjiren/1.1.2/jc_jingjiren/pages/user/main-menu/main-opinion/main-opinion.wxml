@@ -1,0 +1,50 @@
+<view class=''>
+  <view class='page-head'>
+      <view class='head-top'>
+          <view class='imgbox tc'>
+            <icon class='iconfont icon-kefu'></icon>
+          </view>
+      </view> 
+      <view class='head-bottom'>
+          <view class='head-title'>告诉我们您遇到的问题或建议吧</view>
+      </view>
+  </view>
+  <view class='page-body'>
+    <form bindsubmit="formSubmit" bindreset="formReset" report-submit="true">
+      <view class='w-cell-title'>问题描述</view>
+      <view class='w-text-wrapper'>
+        <textarea name='content' class="weui-textarea" placeholder='请描述问题或建议，我们会不断改进' placeholder-class='placeholderstyle' bindinput="bindTextinput" maxlength='{{maxlength}}'/>
+        <view class="weui-textarea-counter">{{realength}}/{{maxlength}}</view>
+      </view>
+      <view class='w-cell-title'>
+        上传相关图片(可选，最多2张)
+        <button class='updataimg' catchtap='updataImage'>上传</button>
+      </view>
+      <view class='w-image-wrapper'>
+          <view class="weui-uploader">
+            <view class="weui-uploader__bd">
+                <view class="weui-uploader__files" id="uploaderFiles">
+                  <block wx:for="{{files}}" wx:key="*this">
+                      <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                          <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                          <view class='weui-uploader-del' data-index='{{index}}' catchtap='delImage'>X</view>
+                      </view>
+                  </block>
+                </view>
+                <view class="weui-uploader__input-box tc">
+                  <icon class='iconfont icon-zhaoxiangji'> </icon>
+                  <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                </view>
+            </view>
+        </view>
+      </view>
+      <view class='w-cell-title'>联系方式(手机号或微信)</view>
+      <view class='w-tel-wrapper'>
+        <input name='tel' class='weui-input' type='text' maxlength='30'></input>
+      </view>
+      <view class='w-submit'>
+         <button formType="submit">提交</button>
+      </view>
+    </form>
+  </view>
+</view>

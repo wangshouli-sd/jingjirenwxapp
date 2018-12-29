@@ -1,0 +1,156 @@
+<view class='page'>
+  <view class='wrapper'>
+    <view class='wraper-top'>
+      <image src='{{banner}}'></image>
+    </view>
+    <view class='wrapper-header'>
+      <i-row i-class="tabbar-row">
+        <i-col span="8" i-class="tabbar-list-item" catchtap="handleNavigateTo" data-url='../tab-progress/progress?openid={{openid}}'>
+          <view class='tab-item-icon bgt1'>
+            <i-icon type="yewuliucheng" size="24" color="#FFFFFF"></i-icon>
+          </view>
+          <view class='tab-item-title'>
+            项目进度
+          </view>
+        </i-col>
+        <i-col span="8" i-class="tabbar-list-item" catchtap="handleNavigateTo" data-url='../../contacts/customer-add/add?openid={{openid}}'>
+          <view class='tab-item-icon bgt2'>
+            <i-icon type="tianjiarenyuan" size="24" color="#FFFFFF"></i-icon>
+          </view>
+          <view class='tab-item-title'>
+            添加联系人
+          </view>
+        </i-col>
+        <i-col span="8" i-class="tabbar-list-item" catchtap="handleNavigateTo" data-url='../../user/main-menu/main-posters2/main-posters2?openid={{openid}}'>
+          <view class='tab-item-icon bgt3'>
+            <i-icon type="erweima" size="20" color="#FFFFFF"></i-icon>
+          </view>
+          <view class='tab-item-title'>
+            我的推荐码
+          </view>
+        </i-col>
+      </i-row>
+    </view>
+    <view class='wrapper-body'>
+      <view class='wrapper-title'>
+        业务应用
+      </view>
+      <view class='menu-list'>
+          <i-row i-class="menu-row">
+              <i-col span="6" i-class="menu-list-item" catchtap="handleNavigateTo" data-url="../yewu-menu/yewu-normal-audit/normal-audit?state=5&openid={{openid}}">
+        <!-- 0未通过，1洽谈中，2是服务中，3是已完成,4是待传合同，5是审核中，6是洽谈失败，7是服务中止 -->
+                <view class='menu-list-item-iconbox bg1'>
+                  <i-icon type="shijian" size="24" color="#FFFFFF"></i-icon>
+                </view>
+                <view class='menu-list-item-title'>
+                  待审核业务
+                </view>
+              </i-col>
+              <i-col span="6" i-class="menu-list-item" catchtap="handleNavigateTo" data-url='../yewu-menu/yewu-normal-audit/normal-audit?state=1&openid={{openid}}'>
+                <view class='menu-list-item-iconbox bg2'>
+                  <i-icon type="qiatan" size="24" color="#FFFFFF"></i-icon>
+                </view>
+                <view class='menu-list-item-title'>
+                  洽谈中业务
+                </view>
+              </i-col>
+              <i-col span="6" i-class="menu-list-item" catchtap="handleNavigateTo" data-url='../yewu-menu/yewu-normal-audit/normal-audit?state=4&openid={{openid}}'>
+                <view class='menu-list-item-iconbox bg3'>
+                  <i-icon type="qianyuezhuangtai" size="24" color="#FFFFFF"></i-icon>
+                </view>
+                <view class='menu-list-item-title'>
+                  已签约待服务
+                </view>
+              </i-col>
+              <i-col span="6" i-class="menu-list-item" catchtap="handleNavigateTo" data-url='../yewu-menu/yewu-normal-audit/normal-audit?state=2&openid={{openid}}'>
+                <view class='menu-list-item-iconbox bg4'>
+                  <i-icon type="fuwu" size="24" color="#FFFFFF"></i-icon>
+                </view>
+                <view class='menu-list-item-title'>
+                  服务中业务
+                </view>
+              </i-col>
+              <i-col span="6" i-class="menu-list-item" catchtap="handleNavigateTo" data-url='../yewu-menu/yewu-normal-audit/normal-audit?state=3&openid={{openid}}'>
+                <view class='menu-list-item-iconbox bg5'>
+                  <i-icon type="wancheng" size="24" color="#FFFFFF"></i-icon>
+                </view>
+                <view class='menu-list-item-title'>
+                  已完成业务
+                </view>
+              </i-col>
+              <i-col span="6" i-class="menu-list-item" catchtap="handleNavigateTo" data-url='../yewu-menu/yewu-normal-audit/normal-audit?state=0&openid={{openid}}'>
+                <view class='menu-list-item-iconbox bg6'>
+                  <i-icon type="shenheshibai" size="24" color="#FFFFFF"></i-icon>
+                </view>
+                <view class='menu-list-item-title'>
+                  审核失败
+                </view>
+              </i-col>
+              <i-col span="6" i-class="menu-list-item" catchtap="handleNavigateTo" data-url='../yewu-menu/yewu-normal-audit/normal-audit?state=6&openid={{openid}}'>
+                <view class='menu-list-item-iconbox bg7'>
+                  <i-icon type="shibai1" size="24" color="#FFFFFF"></i-icon>
+                </view>
+                <view class='menu-list-item-title'>
+                  洽谈失败
+                </view>
+              </i-col>
+              <i-col span="6" i-class="menu-list-item" catchtap="handleNavigateTo" data-url='../yewu-menu/yewu-normal-audit/normal-audit?state=7&openid={{openid}}'>
+                <view class='menu-list-item-iconbox bg8'>
+                  <i-icon type="shibai" size="24" color="#FFFFFF"></i-icon>
+                </view>
+                <view class='menu-list-item-title'>
+                  服务中止
+                </view>
+              </i-col>
+            </i-row>
+        </view>
+      <view class='wrapper-title'>
+        其他应用
+      </view>
+       <view class='menu-list'>
+          <i-row i-class="menu-row">
+            <i-col span="6" i-class="menu-list-item" catchtap="handleNavigateTo"  data-url='../../user/main-menu/main-team/main-team'>
+              <view class='menu-list-item-iconbox bgc5'>
+                <i-icon type="tuanduixianxingtubiao" size="24" color="#FFFFFF"></i-icon>
+              </view>
+              <view class='menu-list-item-title'>
+                我的团队
+              </view>
+            </i-col>
+            <i-col span="6" i-class="menu-list-item" catchtap="handleNavigateTo"  data-url='../../user/main-menu/main-shouru/main-shouru'>
+              <view class='menu-list-item-iconbox bgc1'>
+                <i-icon type="jiangbei" size="24" color="#FFFFFF"></i-icon>
+              </view>
+              <view class='menu-list-item-title' >
+                我的提成
+              </view>
+            </i-col>
+            <!-- <i-col span="6" i-class="menu-list-item">
+              <view class='menu-list-item-iconbox bgc2'>
+                <i-icon type="geren" size="24" color="#FFFFFF"></i-icon>
+              </view>
+              <view class='menu-list-item-title'>
+                个人排行榜
+              </view>
+            </i-col>
+            <i-col span="6" i-class="menu-list-item">
+              <view class='menu-list-item-iconbox bgc3'>
+                <i-icon type="geren" size="24" color="#FFFFFF"></i-icon>
+              </view>
+              <view class='menu-list-item-title'>
+                资料库
+              </view>
+            </i-col>
+            <i-col span="6" i-class="menu-list-item">
+              <view class='menu-list-item-iconbox bgc4'>
+                <i-icon type="geren" size="24" color="#FFFFFF"></i-icon>
+              </view>
+              <view class='menu-list-item-title'>
+                积分商城
+              </view>
+            </i-col> -->
+          </i-row>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,70 @@
+<include src="../../template/shadowTop.wxml"/>
+<view class='page'>
+  <form bindsubmit="formSubmit" bindreset="formReset" report-submit="true">
+  <view class='page-body'>
+    
+      <view class='w-cell-item w-headimg weui-flex'>
+          <!-- <view class='weui-flex__item lf'>
+              <text>更新头像</text>
+          </view>
+          <view class='weui-flex__item tr'>
+              <image catchtap='chooseImage' src='{{user_img}}'></image>
+          </view> -->
+          <view class='weui-flex__item authorimg'>
+            <image src='{{user_img}}'></image>
+          </view>
+      </view>
+      <view class='w-cell-item weui-flex'>
+          <view class='weui-flex__item'>
+              <text>昵称(不可修改)</text>
+          </view>
+          <view class='weui-flex__item tr'> 
+              <input readonly="{{true}}" class='weui-input' value='{{nick_name}}' maxlength='20'></input>
+          </view>
+      </view>
+      <view class='w-cell-item weui-flex'>
+          <view class='weui-flex__item'>
+              <text>性别</text>
+          </view>
+          <view class='weui-flex__item tr'>
+            <picker name='sex' bindchange="bindGenderChange" value="{{genderindex}}" range="{{genderArray}}">
+              <text>{{genderArray[genderindex]}}</text>
+            </picker> 
+          </view>
+      </view>
+      <view class='w-interval'></view>
+      <view class='w-cell-item weui-flex'>
+          <view class='weui-flex__item'>
+              <text>出生年月</text>
+          </view>
+          <view class='weui-flex__item tr'>
+            <picker name='brithday' mode="date" fields='month' value="{{date}}" start="1900-09-01" end="{{formatDate}}" bindchange="bindDateChange">
+              <text>{{date}}</text> 
+            </picker>
+          </view>
+      </view>
+      
+      <view class='w-cell-item weui-flex'>
+        <view class='weui-flex__item'>
+            <text>所在城市</text>
+        </view>
+        <view class='weui-flex__item tr'>
+          <picker name='city' mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">                 <text>{{region[0]}}，{{region[1]}}，{{region[2]}}</text>
+          </picker>
+        </view>
+      </view>
+      <view class='w-interval'></view>
+      <view class='w-cell-item w-jianjie'>
+          <view class='w-jianjie-title'>简介</view>
+          <view class="weui-cell__bd">
+            <textarea name='description' class="weui-textarea" placeholder="请输入简介" value='{{description}}' bindinput="bindTextinput" maxlength='{{maxlength}}'/>
+            <view class="weui-textarea-counter">{{realength}}/{{maxlength}}</view>
+          </view>
+      </view>
+    </view>
+    <view class='w-interval'></view>
+    <view class='w-btn-box'>
+      <button type='primary' formType="submit">提交</button>
+    </view>
+  </form>
+</view>

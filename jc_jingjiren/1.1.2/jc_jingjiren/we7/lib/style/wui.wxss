@@ -1,0 +1,251 @@
+/* -------------------------------单页面模板--------------start------------------- */
+
+/* 没有更多数据------template/noMoreData.wxml */
+
+.w-nodata-imgBox {
+  width: 452rpx;
+  height: 450rpx;
+  margin-top: 117rpx;
+  margin-left: 197rpx;
+}
+
+.w-nodata-imgBox image {
+  width: 100%;
+  height: 100%;
+}
+
+.w-nodata-title {
+  font-size: 26rpx;
+  color: #4b4747;
+  margin-top: 50rpx;
+  text-align: center;
+}
+
+/*悬浮 客服 ------template/kefu.wxml */
+
+.w-kefu {
+  position: fixed;
+  right: 20rpx;
+  color: #52a1fd;
+  z-index: 100;
+  bottom: 150rpx;
+  text-align: center;
+  padding: 10rpx;
+  /* background: white; */
+}
+
+.w-kefua {
+  position: fixed;
+  right: 20rpx;
+  bottom: 150rpx;
+  text-align: center;
+  color: #52a1fd;
+  display: inline-table;
+  border-radius:10rpx;
+  background: rgba(255, 255, 255, 1);
+  z-index: 100;
+}
+
+.o-kefu {
+  /* position: fixed; */
+  right: 20rpx;
+  /* color: #03aaf7; */
+  z-index: 100;
+  bottom: 150rpx;
+  /* padding-bottom: 100rpx; */
+  /* top: 20rpx; */
+  text-align: center;
+  padding: 10rpx;
+  /* background: white; */
+}
+
+.w-kefu-icon-box {
+  text-align: center;
+}
+
+.w-kefua-icon-box {
+  text-align: center;
+}
+
+.w-kefu icon {
+  font-size: 50rpx;
+  width: 100%;
+  height: 100%;
+  margin-left: 0rpx;
+  top: 0rpx;
+  display: inline-table;
+}
+
+.w-kefua icon {
+  font-size: 50rpx;
+  margin-left: 0rpx;
+  top: 0rpx;
+  display: inline-table;
+}
+
+
+
+.w-kefu-text {
+  /* font-size: 26rpx; */
+}
+
+/* 显示或者隐藏 */
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* 整个客服遮罩层 */
+
+.buydes-dialog-container {
+  /* width: 100%; */
+  height: 300rpx;
+  justify-content: space-between;
+  background-color: #fff;
+  position: fixed;
+  bottom: 101rpx;
+  /* z-index: 998;   */
+  border-top: 1rpx solid #e8e8e8;
+}
+
+/* -------------------------------单页面模板---------------end-------------------- */
+
+/* -------------------------------页面内嵌相同部分---------start------------------- */
+
+/* 间隔线 */
+
+.w-interval {
+  height: 40rpx;
+  background: #f0eff5;
+}
+
+/* 选择框 选中样式 wui */
+
+.w-type-item-radio {
+  border: 1px solid #b5b5b5;
+  height: 30rpx;
+  width: 30rpx;
+  border-radius: 50%;
+  padding: 6rpx;
+}
+
+.w-type-item-radio view {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #b5b5b5;
+}
+
+/* 去除btn重复边框 */
+
+button::after {
+  border: none;
+}
+
+/* 公告 */
+
+.w-gonggao-wrapper {
+  /* border: 1rpx solid red; */
+  overflow: hidden;
+  height: 100%;
+}
+
+.w-gonggao-box {
+  width: 100%;
+  height: 50rpx;
+}
+
+.w-gonggao-box-animition {
+  transition: all 0.4s;
+}
+
+/* .w-gonggao-item{
+  color:#494949;
+  padding: 0 10rpx;
+
+  display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+
+  font-size: 22rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+
+.w-gonggao-line{
+  width: 3rpx;
+  height: 36rpx;
+  margin-top: 7rpx;
+  background:rgb(167, 167, 167);
+  margin:7rpx 30rpx 0rpx 30rpx;
+} */
+
+/* 首页通用标题 */
+
+.w-tab-title {
+  position: relative;
+  padding: 12px 15px;
+  background: #fff;
+  align-items: center;
+  line-height: 1.4;
+  font-size: 14px;
+  overflow: hidden;
+  /* border: 1px solid black; */
+  width: 750rpx;
+  margin-left: -20rpx;
+  margin-right: -20rpx;
+  height: 100rpx;
+  margin-top: 20rpx;
+}
+
+.w-tab-title-left {
+  font-size: 30rpx;
+  color: #2d2d2d;
+  font-weight: bold;
+}
+
+.w-tab-title-desc {
+  font-size: 20rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(127, 127, 127, 1);
+  margin-top: 0rpx;
+}
+
+.w-tab-title-right {
+  text-align: right;
+  font-size: 18rpx;
+  /* font-family:PingFang-SC-Regular; */
+  font-weight: 400;
+  color: rgba(156, 156, 156, 1);
+}
+
+/* 搜索框 通用*/
+
+.wrapper-search {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 20rpx;
+  margin: 10rpx -20rpx;
+}
+
+.weui-search-bar__box, .weui-search-bar__label {
+  height: 61rpx;
+  background: rgba(245, 245, 245, 1);
+  border-radius: 30px;
+}
+
+.weui-search-bar__input {
+  line-height: 60rpx;
+}
+
+.w-icon-search_in-box {
+  position: absolute;
+  left: 14rpx;
+  top: 7rpx;
+}

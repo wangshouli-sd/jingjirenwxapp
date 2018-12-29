@@ -1,0 +1,33 @@
+<include src="../../template/shadowTop.wxml"/>
+<view class='page'>
+  <view class='w-wrapper'>
+      <view class='w-imgbox'>
+        <image src='../../../images/pic/renzheng.png'></image>
+      </view>
+       <form bindsubmit="formSubmit" bindreset="formReset" report-submit="true">
+      <view class='w-title'>手机认证</view>
+      <view class='w-desc'>欢迎使用经纪人，请完成认证</view>
+      <view class='w-info'>
+        <view class='w-item-cell'>
+            <text class='cell-text'>手机号</text>
+        </view>
+         <view class='w-item-cell border weui-flex' >
+            <text class='cell-text'>+86</text>
+            <input type='number' class='weui-flex__item' bindinput='setTelphone'></input>
+        </view>
+        <view class='w-item-cell'>
+            <text class='cell-text'>验证码</text>
+        </view>
+        <view class='w-item-cell border weui-flex'>
+          <input class='weui-flex__item'  bindinput='setcode'></input>
+          <button wx:if="{{sendalready}}" catchtap='getValidationalready'>已发送{{intervalTime}}s</button>
+          <button wx:else  catchtap='getValidationCode'>获取验证码</button>
+        </view>
+      </view>
+      <view class='w-submit'>
+        <button  formType="submit">下一步</button>
+        <view style='clear:both;'></view>
+      </view>
+      </form>
+  </view>
+</view>

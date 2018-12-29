@@ -1,0 +1,85 @@
+{
+  "pages": [
+    "pages/renwu/renwu-index/renwu-index",
+    "pages/user/renzheng-tel/renzheng-tel",
+    "pages/user/renzheng-idc/renzheng-idc",
+    "pages/user/main/main",
+    "pages/user/main-editor/main-editor",
+    "pages/user/main-menu/main-collection/main-collection",
+    "pages/user/main-menu/main-shouru/main-shouru",
+    "pages/renwu/renwu-detail/renwu-detail",
+    "pages/renwu/renwu-submit/renwu-submit",
+    "pages/renwu/renwu-submit/renwu-xieyi/renwu-xieyi",
+    "pages/renwu/renwu-nopass/renwu-nopass",
+    "pages/user/main-menu/main-opinion/main-opinion",
+    "pages/xiangmu/guanli/guanli",
+    "pages/user/renzheng-start/renzheng-start",
+    "pages/renwu/renwu-fenlei/renwu-fenlei",
+    "pages/user/renzheng-progress/renzheng-progress",
+    "pages/user/main-menu/main-shouru/shouru-ketixian/shouru-ketixian",
+    "pages/user/main-menu/main-shouru/shouru-tixian/shouru-tixian",
+    "pages/xiangmu/detail-qianyue/detail-qianyue",
+    "pages/xiangmu/detail-qiatan/detail-qiatan",
+    "pages/user/main-menu/main-shouru/shouru-jindu/shouru-jindu",
+    "pages/user/main-menu/main-shouru/shouru-yongjinmingxi/shouru-yongjinmingxi",
+    "pages/xiangmu/detail-nodata/detail-nodata",
+    "pages/gonggao/gonggao-list/gonggao-list",
+    "pages/gonggao/gonggao-detail/gonggao-detail",
+    "pages/user/main-menu/main-team/main-team",
+    "pages/user/main-menu/main-shouru/shouru-addcard/shouru-addcard",
+    "pages/user/main-menu/main-shouru/shouru-addcard-detail/shouru-addcard-detail",
+    "pages/user/main-menu/main-posters2/main-posters2",
+    "pages/user/main-menu/main-shouru/shouru-tixianmingxi/shouru-tixianmingxi",
+    "pages/workbench/index/index",
+    "pages/workbench/yewu-menu/yewu-complete/index",
+    "pages/workbench/yewu-menu/yewu-defeat-talk/defeat-talk",
+    "pages/workbench/yewu-menu/yewu-defeat-serve/defeat-serve",
+    "pages/workbench/yewu-menu/yewu-defeat-audit/defeat-audit",
+    "pages/workbench/yewu-menu/yewu-normal-audit/normal-audit",
+    "pages/workbench/yewu-menu/yewu-normal-talk/normal-talk",
+    "pages/workbench/yewu-menu/yewu-normal-serve/normal-serve",
+    "pages/workbench/yewu-menu/yewu-normal-signing/normal-signing",
+    "pages/workbench/tab-progress/progress",
+    "pages/contacts/index/index",
+    "pages/contacts/customer-detail/detail",
+    "pages/contacts/customer-add/add"
+  ],
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#409eff",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/renwu/renwu-index/renwu-index",
+        "text": "首页",
+        "iconPath": "images/tabbar/icon-default/new/home.png",
+        "selectedIconPath": "images/tabbar/icon-default/new/home_in.png"
+      },
+      {
+        "pagePath": "pages/contacts/index/index",
+        "text": "通讯录",
+        "iconPath": "images/tabbar/icon-default/new/contacts.png",
+        "selectedIconPath": "images/tabbar/icon-default/new/contacts_in.png"
+      },
+      {
+        "pagePath": "pages/workbench/index/index",
+        "text": "工作台",
+        "iconPath": "images/tabbar/icon-default/new/workbench.png",
+        "selectedIconPath": "images/tabbar/icon-default/new/workbench_in.png"
+      },
+      {
+        "pagePath": "pages/user/main/main",
+        "text": "我的",
+        "iconPath": "images/tabbar/icon-default/new/user.png",
+        "selectedIconPath": "images/tabbar/icon-default/new/user_in.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "经纪人",
+    "navigationBarTextStyle": "black"
+  }
+}

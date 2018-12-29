@@ -10,6 +10,7 @@ Page({
     baseUrlData: app.siteInfo.siteroot,
     openid: app.globalData.openid,
 
+    issencode:'1',
     intervalTime: 61,
     sendalready: false,
     sendcode: 'no',

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "项目进度",
+  "usingComponents": {
+    "i-icon": "../../../we7/dist/icon/index",
+    "i-tag": "../../../we7/dist/tag/index"
+  }
+}

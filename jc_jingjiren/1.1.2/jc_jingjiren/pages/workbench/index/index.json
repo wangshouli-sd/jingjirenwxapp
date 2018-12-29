@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "工作台",
+  "usingComponents": {
+    "i-panel": "../../../we7/dist/panel/index",
+    "i-row": "../../../we7/dist/row/index",
+    "i-col": "../../../we7/dist/col/index",
+    "i-icon": "../../../we7/dist/icon/index"
+  }
+}

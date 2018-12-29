@@ -1,0 +1,63 @@
+<view class='page-body'>
+  <view class='w-wrapper1'>
+    账户余额：   <text>{{yu_money}}(元)</text>
+  </view>
+  <view class='w-head weui-flex'>
+    <view class='w-head-l'>
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class='w-head-r weui-flex__item'>
+      <view class='w-head-r-title'>
+        <open-data type="userNickName"></open-data>
+      </view>
+    </view>
+  </view>
+  <view class='w-list-wrapper'>
+    <block  wx:for="{{list}}"  wx:key="*this">
+      <view class='w-list-item w-card'>
+        <view class='list-item-head w-card-head weui-flex'>
+          <view class='item-head-imgbox'>
+            <image wx:if='{{item.typename == "支付宝"}}'src='../../../../../images/pic/zhifubao.png'></image>
+            <image wx:if='{{item.typename == "银行卡"}}' src='../../../../../images/pic/yinhangka.png'></image>
+            <image wx:if='{{item.typename == "微信钱包"}}' src='../../../../../images/pic/weixin.png'></image>
+          </view>
+          <view class='item-head-title weui-flex__item'>
+            <view class=''>提现到{{item.typename}}
+              <text wx:if="{{item.state == '0'}}" class='statetag statetag0'>未通过</text>
+              <text wx:elif="{{item.state == '1'}}" class='statetag statetag1'>审核中</text>
+              <text wx:elif="{{item.state == '2'}}" class='statetag statetag2'>提现中</text>
+              <text wx:else class='statetag statetag3'>已完成</text>
+            </view>
+          </view>
+          <view class='item-head-yongjin'>
+            <!-- <view class=''>提现金额</view> -->
+            <view>￥{{item.money}}</view>
+          </view>
+        </view>
+        <view wx:if='{{item.typename == "支付宝"}}' class='list-item-body w-card-body'>
+          <view>提现单号：{{item.number}}</view>
+          <view>提现方式：支付宝</view>
+          <view>提现账号：{{item.alipay}}</view>
+          <view>完成时间：{{item.time}}</view>
+        </view>
+        <view wx:if='{{item.typename == "微信钱包"}}' class='list-item-body w-card-body'>
+          <view>提现单号：{{item.number}}</view>
+          <view>提现方式：微信钱包</view>
+          <view>完成时间：{{item.time}}</view>
+        </view>
+        <view wx:if='{{item.typename == "银行卡"}}' class='list-item-body w-card-body'>
+          <view>提现单号：{{item.number}}</view>
+          <view>提现方式：银行卡</view>
+          <view>提现卡号：{{item.bank_card}}</view>
+          <view>完成时间：{{item.time}}</view>
+        </view>
+        <!-- <view class='list-item-foot w-card-foot weui-flex'>
+          <view class='weui-flex__item item-foot-r'>提现类型</view>
+        </view> -->
+      </view>
+    </block>   
+  </view>
+  <view wx:if="{{nomoredata}}">
+    <include src="../../../../template/noMoreData.wxml"/>
+  </view> 
+</view>

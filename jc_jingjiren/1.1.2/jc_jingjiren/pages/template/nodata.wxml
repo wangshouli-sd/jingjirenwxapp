@@ -1,0 +1,10 @@
+<view>
+  <view class='w-nodata'>
+    <view class='w-nodata-imgBox'>
+      <image src='../../../images/nodata.png'></image>
+    </view>
+    <view class='w-nodata-title'>
+      暂无数据
+    </view>
+  </view>
+</view>

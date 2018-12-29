@@ -1,0 +1,44 @@
+<view class="wrapper">
+  <scroll-view class="scrollList" scroll-y scroll-into-view="{{scrollViewId}}" style="height:{{winHeight}}px">
+    <view class="uni-list" wx:if="{{customer}}">
+      <block wx:for="{{customer}}" wx:key="{{index}}" wx:if="item.data[0]">
+        <view class="uni-list-cell-divider" id="{{item.letter}}">
+          {{item.letter}}
+        </view>
+        <view class="uni-list-cell {{list.data.length -1 == index ? 'uni-list-cell-last' : ''}}" hover-class="uni-list-cell-hover" wx:for="{{item.data}}" wx:for-item="itemson" wx:for-index="sindex" wx:key="{{sindex}}">
+          <view class="uni-list-cell-navigate">
+            <!-- {{itemson}} -->
+            <view class='user-info weui-flex'>
+              <view class='user-name weui-flex__item'>
+                <i-icon type="geren" size="18" color="#7D7D7D"></i-icon>
+                <text>{{itemson.customer_name}}</text>
+              </view>
+              <view class='user-infobtn'>
+                <!-- <button catchtap='navigateToDetail' catchtap="handleNavigateTo" data-url='../customer-detail/detail' data-id='{{itemson.id}}' >查看</button>-->
+                <button catchtap='navigateToDetail' data-url='../customer-detail/detail' data-id='{{itemson.id}}'>查看</button>
+              </view>
+            </view>
+            <view class='user-tel'>
+              <i-icon type="dianhua" size="18" color="#7D7D7D"></i-icon>
+              <text catchtap=''>{{itemson.customer_phone}}</text>
+            </view>
+            <view wx:if="{{true}}" class='user-desc'>
+              <i-icon type="qianyuezhuangtai" size="16" color="#7D7D7D"></i-icon>
+              <text wx:if="{{itemson.remarks}}">{{itemson.remarks}}</text>
+              <text wx:else>暂无备注……</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class='wrapper_nodata' wx:else>
+      <image src='../../../images/pic/none.png'></image>
+     
+    </view>
+  </scroll-view>
+
+  <view class="uni-indexed-list-bar {{touchmove ? 'active' : ''}}" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" bindtouchcancel="touchCancel" style="height:{{winHeight}}px;'">
+    <view wx:for="{{lists}}" wx:key="index" class="uni-indexed-list-text {{touchmoveIndex == index ? 'active' : ''}}" style="height:{{itemHeight}}px;line-height:{{itemHeight}}px">{{item.letter}}</view>
+  </view>
+  <view class="indexed-list-alert" wx:if="{{touchmove}}">{{lists[touchmoveIndex].letter}}</view>
+</view>

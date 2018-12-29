@@ -236,5 +236,44 @@ Page({
     wx.navigateTo({
       url: url,
     })
-  }
+  },
+  navigateToDel: function (e) {
+    let id =e.currentTarget.dataset.id
+    var that = this
+    wx.showModal({
+      title: '提示',
+      content: '确定要删除该联系人吗',
+      success: function (res){
+        if (res.confirm) {
+          console.log('shanchu ')
+            app.util.request({
+              'url': 'entry/wxapp/index',
+              'data': {
+                m: 'jc_jingjiren',
+                r: 'fr-member/del-customer',
+                id: e.currentTarget.dataset.id,
+                openid: that.data.openid
+              },
+            success: function (res) {
+              console.log(res)
+              if (res.data.status.state == 'success') {
+                wx.showToast({
+                  title: '删除成功',
+                  icon: 'none',
+                  duration: 1000
+                })
+              } else  {
+                wx.showToast({
+                  title: '删除失败，请检查客户是否有业务',
+                  icon: 'none',
+                  duration: 1000
+                })
+              }
+
+            },
+          })
+        }
+      }
+    })  
+  },
 })

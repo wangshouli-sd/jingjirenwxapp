@@ -1,0 +1,87 @@
+.page{
+  padding: 0px;
+}
+.w-cell-item{
+  height: 130rpx;
+  padding: 0rpx 20rpx;
+  border-bottom: 1px solid  #eaeaea;
+}
+.w-cell-item .weui-flex__item{
+  line-height: 130rpx;
+}
+.w-headimg{
+  height: 280rpx;
+}
+.w-headimg .lf{
+  line-height: 238rpx;
+}
+.authorimg{
+  text-align: center;
+}
+.authorimg image{
+  width: 140rpx;
+  height: 140rpx;
+  margin-top: 90rpx;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 4rpx 8rpx 20rpx 0rpx #75bad7;
+}
+.w-headimg .tr image{
+  width: 140rpx;
+  height: 140rpx;
+  margin-top: 47rpx;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 4rpx 8rpx 20rpx 0rpx #75bad7;
+}
+.w-cell-item .weui-flex__item:nth-child(1){
+  font-size: 30rpx;
+  color: #000000;
+}
+.w-interval{
+  height: 40rpx;
+  background: #f0eff5;
+}
+.tr{
+  font-size: 30rpx;
+  color: #625D5D;
+}
+.weui-input{
+  /* border: 1px solid black; */
+  margin-top: 25rpx;
+}
+/* 简介 */
+.w-jianjie{
+  height: auto;
+  border: none;
+}
+.w-jianjie-title{
+  height: 130rpx;
+  line-height: 130rpx;
+}
+.weui-textarea{
+  height: 180rpx;
+  /* border: 1px solid black; */
+}
+.w-submit-wrapper{
+  padding: 50rpx 20rpx;
+  /* border: 1px solid black; */
+}
+.w-submit-wrapper button{
+    height: 80rpx;
+    line-height: 80rpx;
+}
+
+
+.w-btn-box{
+  padding: 25rpx;
+}
+.w-btn-box button{
+  width:100%;
+  height:83rpx;
+  background:rgba(82,161,253,1);
+  border-radius:37px;
+  color: white;
+  line-height: 80rpx;
+  margin-top: 40rpx;
+}

@@ -1,0 +1,293 @@
+<view class="page">
+  <view class="page-section page-section-spacing swiper">
+    <swiper indicator-dots="{{indicatorDots}}" indicator-active-color="rgb(255,255,255)" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+      <!-- <block wx:for="{{banner}}" wx:key="*this">
+        <swiper-item>
+          <image src="{{item.imgurl}}" class="slide-image" />
+          <image src='{{to_patch}}'></image>
+        </swiper-item>
+      </block> -->
+      <block wx:for="{{luobo}}" wx:key="*this">
+        <swiper-item catchtap='navigateToDetail' data-url='../renwu-detail/renwu-detail' data-id='{{item.params}}' >
+          <image src="{{item.img}}" class="slide-image" />
+          <view class='project-item-icon'>
+          </view>
+        </swiper-item>
+      </block>
+
+    </swiper>
+    <!-- <button open-type='contact'>联系客服</button> -->
+  </view>
+  <view class='w-title'>
+    <view class='w-title-border'>
+      <span class="w-title-text">最新项目</span>
+    </view>
+  </view>
+  <view class='w-desc'>
+    <view>所有梦想和机会终会在这里相遇</view>
+  </view>
+  <!-- 公告上面的东西 -->
+  <view class='page-body'>
+    <view class='w-project'>
+      <view class="weui-flex">
+        <view wx:for="{{project}}" wx:key="item" class="weui-flex__item w-project-item">
+          <view class='project-item-icon' catchtap='navigateTopage' data-url='../renwu-fenlei/renwu-fenlei' data-cate='{{item.url}}'>
+            <!-- <image src='../../../images/pic/zhifubao.png'></image> -->
+            <image src="{{item.path}}"></image>
+            <view class='project-item-title'>
+              {{item.name}}
+            </view>
+          </view>
+        </view>
+        <!-- 更多项目 -->
+        <view wx:for="{{more}}" wx:key="item" class="weui-flex__item w-project-item">
+          <view class='project-item-icon' catchtap='navigateTomoreproject' data-url='../renwu-fenlei/renwu-fenlei'>
+            <!-- <image src='../../../images/pic/more.png'></image> -->
+            <image src='{{item.img_path}}'></image>
+            <view class='project-item-title'>
+              更多项目
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='w-gonggao weui-flex'>
+      <view>
+        <view class="placeholder gonggao-placeholder">公告</view>
+      </view>
+      <view class='w-gonggao-icon'>
+        <icon class='iconfont icon-gonggao'></icon>
+      </view>
+      <view class='w-gonggao-line'></view>
+      <view class="weui-flex__item">
+        <view class="w-gonggao-wrapper ">
+
+          <view class='w-gonggao-box {{animation?"w-gonggao-box-animition":""}}' style='transform: translateY({{translateY}})'>
+            <block wx:for="{{gglist}}" wx:key="*this">
+              <view class='w-gonggao-item' data-id='{{item.id}}' catchtap='navigateToDetail' data-url='../../gonggao/gonggao-detail/gonggao-detail'>{{item.title}}</view>
+            </block>
+          </view>
+        </view>
+      </view>
+      <view catchtap='navigateTopage' data-url='../../gonggao/gonggao-list/gonggao-list'>
+        <view class="placeholder more-placeholder">更多></view>
+      </view>
+
+    </view>
+    <!--热门活动  -->
+    <!-- <view class='w-tab-title'>
+      <view class='weui-flex'>
+        <view class='weui-flex__item w-tab-title-left'>
+          热门活动
+        </view>
+        <view class='weui-flex__item w-tab-title-right'>
+          查看更多
+        </view>
+      </view>
+    </view> -->
+    <!-- <view class='w-activity weui-flex'>
+      <view class='weui-flex__item w-activity-left'>
+        <view class='w-activity-h1'>
+          定制开发
+        </view>
+        <view class='w-activity-h1-desc'>
+          要啥有啥
+        </view>
+      </view>
+      <view class='weui-flex__item w-activity-right'>
+        <view class='w-activity-r-top'>
+
+        </view>
+        <view class='w-activity-r-bottom'>
+
+        </view>
+      </view>
+    </view> -->
+    <!-- 最新项目 -->
+    <view class='w-tab-title'>
+      <view class='weui-flex'>
+        <view class='weui-flex__item w-tab-title-left'>
+          <view>最新项目</view>
+          <view class='w-tab-title-desc'>有需求就能满足</view>
+        </view>
+        <view class='weui-flex__item w-tab-title-right' catchtap='navigateTomore' data-url='../renwu-fenlei/renwu-fenlei'>
+          查看更多
+        </view>
+      </view>
+    </view>
+    <view class='w-renwulist'>
+      <block wx:for="{{renwuListnew}}" wx:key="*this">
+        <view class='list-item weui-flex' catchtap='navigateToDetail' data-url='../renwu-detail/renwu-detail' data-id='{{item.id}}'>
+          <view class='item-left'>
+            <view class="placeholder">
+              <image src='{{item.img_path}}'></image>
+              <view>预计可得{{yongjin}}
+                <text>{{item.min_price}}~{{item.max_price}}</text>元</view>
+            </view>
+          </view>
+          <view class="weui-flex__item item-right">
+            <view class="placeholder">
+              <view class='item-title'>{{item.name}}</view>
+              <view class='item-desc'>{{item.subname}}</view>
+              <view class='item-info'>
+                <view>{{yongjin}}比例:{{item.vt_price_percent}}%</view>
+                <view>已发放:{{item.vt_price_already}}元</view>
+                <view>已成交:{{item.vt_price_total}}单</view>
+                <view>申请人数:{{item.vt_project_count}}人</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+
+      <view wx:if="{{nomoredata}}">
+        <include src="../../template/noMoreData.wxml" />
+      </view>
+    </view>
+
+    <!-- 专题项目 -->
+    <!-- <view class='w-tab-title'>
+      <view class='weui-flex'>
+        <view class='weui-flex__item w-tab-title-left'>
+          <view>专题项目</view>
+          <view class='w-tab-title-desc'>最牛项目值得拥有</view>
+        </view>
+        <view class='weui-flex__item w-tab-title-right'>
+          查看更多
+        </view>
+      </view>
+    </view>
+    <view class='w-subject'>
+      <scroll-view class="scroll-view_H" scroll-x style="width: 100%;">
+        <view class="w-subject-item">
+          <view class='subject-item-top'>
+            <view class="placeholder">
+              <image src='http://jingji.ijiechen.com//data/ji_jingjiren/2018102916/0248cf631b1f73e2ffb92ddeb2643b4c.png'></image>
+              <view>预计可得
+                <text>451511</text>元</view>
+            </view>
+          </view>
+          <view class='subject-item-bottom'>
+            <view class="placeholder">
+              <view class='subject-item-bottom-title'>项目标题</view>
+              <view class='subject-item-bottom-desc'>项目描述</view>
+              <view class='subject-item-bottom-info'>
+                <view>比例:15%</view>
+                <view>已发放:1251521元</view>
+                <view>已成交:1536单</view>
+                <view>申请人数:586人</view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="w-subject-item">
+          <view class='subject-item-top'>
+            <view class="placeholder">
+              <image src='http://jingji.ijiechen.com//data/ji_jingjiren/2018102916/0248cf631b1f73e2ffb92ddeb2643b4c.png'></image>
+              <view>预计可得
+                <text>451511</text>元</view>
+            </view>
+          </view>
+          <view class='subject-item-bottom'>
+            <view class="placeholder">
+              <view class='subject-item-bottom-title'>项目标题</view>
+              <view class='subject-item-bottom-desc'>项目描述</view>
+              <view class='subject-item-bottom-info'>
+                <view>比例:15%</view>
+                <view>已发放:1251521元</view>
+                <view>已成交:1536单</view>
+                <view>申请人数:586人</view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="w-subject-item">
+          <view class='subject-item-top'>
+            <view class="placeholder">
+              <image src='http://jingji.ijiechen.com//data/ji_jingjiren/2018102916/0248cf631b1f73e2ffb92ddeb2643b4c.png'></image>
+              <view>预计可得
+                <text>451511</text>元</view>
+            </view>
+          </view>
+          <view class='subject-item-bottom'>
+            <view class="placeholder">
+              <view class='subject-item-bottom-title'>项目标题</view>
+              <view class='subject-item-bottom-desc'>项目描述</view>
+              <view class='subject-item-bottom-info'>
+                <view>比例:15%</view>
+                <view>已发放:1251521元</view>
+                <view>已成交:1536单</view>
+                <view>申请人数:586人</view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="w-subject-item">
+          <view class='subject-item-top'>
+            <view class="placeholder">
+              <image src='http://jingji.ijiechen.com//data/ji_jingjiren/2018102916/0248cf631b1f73e2ffb92ddeb2643b4c.png'></image>
+              <view>预计可得
+                <text>451511</text>元</view>
+            </view>
+          </view>
+          <view class='subject-item-bottom'>
+            <view class="placeholder">
+              <view class='subject-item-bottom-title'>项目标题</view>
+              <view class='subject-item-bottom-desc'>项目描述</view>
+              <view class='subject-item-bottom-info'>
+                <view>比例:15%</view>
+                <view>已发放:1251521元</view>
+                <view>已成交:1536单</view>
+                <view>申请人数:586人</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view> -->
+    <!-- 最热项目 -->
+    <view class='w-latest-project'>
+      <view class='w-tab-title'>
+        <view class='weui-flex'>
+          <view class='weui-flex__item w-tab-title-left'>
+            <view>最热项目</view>
+            <view class='w-tab-title-desc'>有需求就能满足</view>
+          </view>
+          <view class='weui-flex__item w-tab-title-right' catchtap='navigateTomorehot' data-url='../renwu-fenlei/renwu-fenlei'>
+            查看更多
+          </view>
+        </view>
+      </view>
+      <block wx:for="{{renwuList}}" wx:key="*this">
+        <view class='list-item weui-flex' catchtap='navigateToDetail' data-url='../renwu-detail/renwu-detail' data-id='{{item.id}}'>
+          <view class='item-left'>
+            <view class="placeholder">
+              <image src='{{item.img_path}}'></image>
+              <view>预计可得{{yongjin}}
+                <text>{{item.min_price}}~{{item.max_price}}</text>元</view>
+            </view>
+          </view>
+          <view class="weui-flex__item item-right">
+            <view class="placeholder">
+              <view class='item-title'>{{item.name}}</view>
+              <view class='item-desc'>{{item.subname}}</view>
+              <view class='item-info'>
+                <view>{{yongjin}}比例:{{item.vt_price_percent}}%</view>
+                <view>已发放:{{item.vt_price_already}}元</view>
+                <view>已成交:{{item.vt_price_total}}单</view>
+                <view>申请人数:{{item.vt_project_count}}人</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+
+<!-- <modal title="授权提示" hidden="{{false}}" no-cancel="false" bindconfirm="modalConfirm">
+  <view> 151651
+    <button open-type="getUserInfo">授权信息</button>
+  </view>
+</modal> -->
