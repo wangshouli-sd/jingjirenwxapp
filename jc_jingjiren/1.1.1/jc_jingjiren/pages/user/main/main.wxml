@@ -96,7 +96,7 @@
         </view>
       </view> -->
 
-    <view class="{{showView?'hide':'show'}}">
+    <view class="{{showView?'hide':'show'}}" >
       <view class='weui-flex__itemaa' style='display:inline-table'>
         <view style='display:inline-table'>
           <view style='display:inline-table;width:280rpx;'>
@@ -118,11 +118,12 @@
       </view>
     </view>
     <view wx:if="{{!showView}}" class='cover' bindtap='handleCoverTap'></view>
-    <view class="w-cell-item weui-flex {{showView?'show':'show'}}" data-url='' catchtap='showButton'>
-      <view class='cell-icon' style='display:inline-table;'>
+
+    <view class="w-cell-item weui-flex " data-url='' catchtap='showButton'>
+      <view class='cell-icon'>
         <icon class='iconfont icon-kefu'></icon>
       </view>
-      <view class='cell-title weui-flex__item' style='display:inline-table;'>
+      <view class='cell-title weui-flex__item'>
         <text>联系客服</text>
       </view>
       <view class='cell-badge weui-flex__item'>

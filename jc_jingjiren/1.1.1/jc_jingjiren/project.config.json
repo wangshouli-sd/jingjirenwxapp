@@ -1,107 +1,40 @@
 {
-	"description": "项目配置文件",
-	"packOptions": {
-		"ignore": []
-	},
-	"setting": {
-		"urlCheck": false,
-		"es6": true,
-		"postcss": true,
-		"minified": true,
-		"newFeature": true
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.4.0",
-	"appid": "wxff35e7a3e7b8115f",
-	"projectname": "%E7%BB%8F%E7%BA%AA%E4%BA%BA1-1-1",
-	"debugOptions": {
-		"hidedInDevtools": []
-	},
-	"isGameTourist": false,
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": 9,
-			"list": [
-				{
-					"id": -1,
-					"name": "个人中心",
-					"pathName": "pages/user/main/main",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "工作台",
-					"pathName": "pages/workbench/index/index",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "已完成业务",
-					"pathName": "pages/workbench/yewu-menu/yewu-complete/index",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "洽谈失败业务",
-					"pathName": "pages/workbench/yewu-menu/yewu-defeat-talk/defeat-talk",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "审核失败业务",
-					"pathName": "pages/workbench/yewu-menu/yewu-defeat-audit/defeat-audit",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "项目进度",
-					"pathName": "pages/workbench/tab-progress/progress",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "通讯录",
-					"pathName": "pages/contacts/index/index",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "通讯录-客户详情",
-					"pathName": "pages/contacts/customer-detail/detail",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "通讯录-添加联系人",
-					"pathName": "pages/contacts/customer-add/add",
-					"query": ""
-				},
-				{
-					"id": -1,
-<<<<<<< HEAD
-					"name": "项目详情页",
-=======
-					"name": "详情页",
->>>>>>> 34a97067ce4c9571591b22980d1351df18219801
-					"pathName": "pages/renwu/renwu-detail/renwu-detail"
-				}
-			]
-		}
-	}
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "autoAudits": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.4.3",
+  "appid": "wxff35e7a3e7b8115f",
+  "projectname": "%E7%BB%8F%E7%BA%AA%E4%BA%BA",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": -1,
+      "list": []
+    }
+  }
 }
